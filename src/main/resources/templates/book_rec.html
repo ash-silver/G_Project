@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <link rel="stylesheet" href="../css/book_rec.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>책 추천</title>
+</head>
+<script>
+    function start(){
+        $(".start").hide();
+        $(".question").show();
+
+    }
+</script>
+<body>
+    <div class="start">
+        <!-- 시작 페이지 누르면 질문 페이지 짜란 -->
+        <h1>오늘 읽고 싶은 책은?</h1>
+
+        <button type="button" onclick="start()">추천 받으러 가기</button>
+        
+    </div> 
+
+    <div class="question" >
+        <!-- 질문마다 버튼 선택하면 데이터 저장 후 넘기기..... -->
+        <h1>질문 1</h1>
+
+
+    </div>
+
+    <div class="result">
+        <!-- select된 데이터 받아서 책 이미지 짜란 -->
+
+    </div>
+</body>
+</html>
