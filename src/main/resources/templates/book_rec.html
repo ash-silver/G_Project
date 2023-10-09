@@ -4,32 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="http://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link rel="stylesheet" href="../css/book_rec.css">
     <link rel="stylesheet" href="../css/index.css">
     <title>책 추천</title>
 </head>
-<script>
+<script type="text/javascript">
+    var num = 1;
+    var q = {
+        1: {"title": "1번 문제", "type": "category", "A": "소설",   "B": "정보를 주는"},
+        2: {"title": "2번 문제", "type": "genre",    "A": "판타지", "B": "로맨스"},
+        3: {"title": "3번 문제", "type": "ending",   "A": "해피",   "B": "새드"},
+        4: {"title": "4번 문제", "type": "length",   "A": "장편",   "B": "단편"},
+        5: {"title": "5번 문제", "type": "length",   "A": "장편",   "B": "단편"}
+    }
+    
     function start(){
         $(".start").hide();
         $(".question").show();
-
+        next();
     }
+
+    function next() {
+        $("#title").html(q[num]["title"]); 
+        $("#type").val(q[num]["type"]); 
+        $("#A").html(q[num]["A"]); 
+        $("#B").html(q[num]["B"]); 
+        // $("#C").html(q[num]["C"]); 
+        num++;
+    }
+    $(document).on("click", "#A", function(){
+        next();
+    })
+    $(document).on("click", "#B", function(){
+        next();
+    })
+    // $("#A").click(function () {
+    //     next();
+    // });
+
+    // $("#B").click(function () {
+    //     next();
+    // });
+    //- 클릭 이벤트 미발생 해결 -
+
+   
+
 </script>
 <body>
     <div class="start">
         <!-- 시작 페이지 누르면 질문 페이지 짜란 -->
         <h1>오늘 읽고 싶은 책은?</h1>
-
         <button type="button" onclick="start()">추천 받으러 가기</button>
-        
     </div> 
 
     <div class="question" >
         <!-- 질문마다 버튼 선택하면 데이터 저장 후 넘기기..... -->
-        <h1>질문 1</h1>
-
-
+        <h2 id="title">1번 문제</h2>
+        <input id="type" type="hidden" value="category">
+        <button id="A" type="button">대답</button>
+        <button id="B" type="button">대답</button>
+        <!-- <button id="C" type="button">대답</button> -->
     </div>
+
+    <input type="hidden" id="category" value="0"><!--소설 vs 정보를 주는..?-->
+    <input type="hidden" id="genre" value="0"> <!--판타지 vs 로맨스 vs 스릴러-->
+    <input type="hidden" id="ending" value="0"><!--해피 vs 새드-->
+    <input type="hidden" id="length" value="0"><!--장편 vs 단편-->
 
     <div class="result">
         <!-- select된 데이터 받아서 책 이미지 짜란 -->
