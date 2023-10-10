@@ -10,8 +10,8 @@
     <title>책 추천</title>
 </head>
 <script type="text/javascript">
-    var num = 1;
-    var q = {
+    var num = 1; //문제 번호 
+    var q = { //질문 데이터
         1: {"title": "1번 문제", "type": "category", "A": "소설",   "B": "정보를 주는"},
         2: {"title": "2번 문제", "type": "genre",    "A": "판타지", "B": "로맨스"},
         3: {"title": "3번 문제", "type": "ending",   "A": "해피",   "B": "새드"},
@@ -19,26 +19,53 @@
         5: {"title": "5번 문제", "type": "length",   "A": "장편",   "B": "단편"}
     }
     
-    function start(){
+    function start(){ // 시작하기 누르면 시작페이지 사라지고 질문 보여주기
         $(".start").hide();
         $(".question").show();
+        $(".result").hide();
         next();
     }
 
-    function next() {
-        $("#title").html(q[num]["title"]); 
+
+    function next() { //자동으로 질문 대답 변경 함수
+        // var Aanswer = $("#A").html();
+        // var Banswer = $("#B").html();
+
+        // $("#type").click(function(){
+        //     alert($(this).html());
+        // });
+       
+        $("#title").html(q[num]["title"]);  //num 가져와서 해당하는 n번 문제 title 텍스트 가져옴
         $("#type").val(q[num]["type"]); 
         $("#A").html(q[num]["A"]); 
         $("#B").html(q[num]["B"]); 
         // $("#C").html(q[num]["C"]); 
+        // alert(num);
+
+
         num++;
+
+
+      
+
+
     }
-    $(document).on("click", "#A", function(){
+    // $(document).on("click", "#A", function(){
+    //     // 클릭 정상 작동 확인용 
+    //     var a=$(this).html() //스프링에 html요소로 전달 안될 수 있으니 변수 선언
+    //     // alert(a); 
+    //     next();
+    // })
+    $(document).on("click", "#B, #A", function(){
+        //클릭 정상 작동 확인용
+        var a=$(this).html() //스프링에 html요소로 전달 안될 수 있으니 변수 선언
+        if(num>5){
+            $(".question").hide();
+            $(".result").show();
+        }
         next();
     })
-    $(document).on("click", "#B", function(){
-        next();
-    })
+
     // $("#A").click(function () {
     //     next();
     // });
@@ -46,7 +73,7 @@
     // $("#B").click(function () {
     //     next();
     // });
-    //- 클릭 이벤트 미발생 해결 -
+    //- 클릭 이벤트 미발생 오류 해결 -  element가 나중에 생긴 경우에는 click 이벤트가 적용되지 않음
 
    
 
@@ -58,13 +85,28 @@
         <button type="button" onclick="start()">추천 받으러 가기</button>
     </div> 
 
-    <div class="question" >
-        <!-- 질문마다 버튼 선택하면 데이터 저장 후 넘기기..... -->
+    <!-- 기존 코딩 -->
+    <!-- <div class="question" >
+        질문마다 버튼 선택하면 데이터 저장 후 넘기기.....
         <h2 id="title">1번 문제</h2>
         <input id="type" type="hidden" value="category">
         <button id="A" type="button">대답</button>
         <button id="B" type="button">대답</button>
-        <!-- <button id="C" type="button">대답</button> -->
+        <button id="C" type="button">대답</button>
+    </div> -->
+
+
+    <!-- form 형식  -->
+    <div class="question" >
+        <form name="question_form" action="" method="post">
+            <fieldset>
+                <h2 id="title">1번 문제</h2>
+
+                <input id="type" type="hidden" value="category">
+                <button id="A" type="button">대답</button>
+                <button id="B" type="button">대답</button>
+            </fieldset>
+        </form>
     </div>
 
     <input type="hidden" id="category" value="0"><!--소설 vs 정보를 주는..?-->
@@ -74,6 +116,7 @@
 
     <div class="result">
         <!-- select된 데이터 받아서 책 이미지 짜란 -->
+        <p>결과 페이지 입니다!</p>
 
     </div>
 </body>
