@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>git test - ashsilver</h1>
-    <form name="login_form" action="" method="" onsubmit="">
+    <form name="login_form" th:action="@{/members/login}" th:method="post" onsubmit="">
         <fieldset>
 
             <legend class="top">우리 앱? 이름에 오신걸 환영합니다</legend>
