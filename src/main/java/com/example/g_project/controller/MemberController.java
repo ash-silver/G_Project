@@ -13,17 +13,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequiredArgsConstructor
 public class MemberController {
     private final MemberService memberService;
-    @GetMapping("/index")
-    public String index(){
-        return "index";
-    }
-    @GetMapping("")
+    @GetMapping("/join")
     public String loadMemberForm(){
-        return "joinMember";
+        System.out.println("ashsilver");
+
+        return "join";
     }
-    @PostMapping("")
+    @PostMapping("/join")
     public String createMember(MemberRequest request){
+        System.out.println("helloworld");
         memberService.createMember(request);
+        System.out.println("ashsilver");
         return "index";
     }
 }

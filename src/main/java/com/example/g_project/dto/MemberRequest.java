@@ -19,7 +19,6 @@ public class MemberRequest {
                 .member_nickname(member_nickname)
                 .member_gender(member_gender)
                 .build();
-
     }
 }
 

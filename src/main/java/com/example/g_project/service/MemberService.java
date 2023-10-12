@@ -13,7 +13,7 @@ public class MemberService {
 
     @Transactional
     public String createMember(MemberRequest request){
-        return memberRepository.save();
+        return memberRepository.save(request.memberEntity()).getMember_email();
     }
 
 

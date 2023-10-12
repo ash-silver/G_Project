@@ -7,32 +7,32 @@
     <title>Document</title>
 </head>
 <body>
-    <form th:action="@{/members}" th:method="post">
+    <form th:action="@{/members/join}" th:method="post">
         <fieldset>
             <legend>[우리 앱? 이름]에 오신 것을 환영합니다!</legend>
 
-            <div class="member_nickname">
-                <label for="member_nickname"class="u_title">아이디</label>
-                <input type="text" name="member_nickname" id="member_nickname" placeholder="아이디">
+            <div class="member_email">
+                <label for="member_email"class="u_title">아이디</label>
+                <input type="text" name="member_email" id="member_email" placeholder="이메일/아이디">
             </div>
 
             <div class="member_password">
                 <label for="member_password">비밀번호</label>
-                <input type="text" name="member_password" id="member_password" placeholder="비밀번호"> 
+                <input type="password" name="member_password" id="member_password" placeholder="비밀번호">
             </div>
             <div class="re_password">
                 <label for="re_password">비밀번호 확인</label>
-                <input type="text" name="re_password" id="re_password" placeholder="비밀번호 확인"> 
+                <input type="password" name="re_password" id="re_password" placeholder="비밀번호 확인">
             </div>
-            <div class="member_email">
-                <label for="member_email">이메일</label>
-                <input type="text" name="member_email" id="member_email" placeholder="이메일"> 
+            <div class="member_nickname">
+                <label for="member_nickname">닉넴</label>
+                <input type="text" name="member_nickname" id="member_nickname" placeholder="닉넴">
             </div>
             <div class="member_gender">
                 <span class="c_title">성별</span>
-                <input type="radio" name="gender" id="male" value="m">
+                <input type="radio" name="member_gender" id="male" value="M">
                 <label for="male">남</label>
-                <input type="radio" name="gender" id="female" value="f">
+                <input type="radio" name="member_gender" id="female" value="W">
                 <label for="female">여</label>
             </div>
             <div class="apply">
