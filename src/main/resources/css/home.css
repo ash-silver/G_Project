@@ -1,0 +1,45 @@
+header{
+    position: relative
+}
+.bottom_menu{
+    width: 640px;
+    position: fixed;
+    bottom: 0px;
+    background-color: #b24040;
+    
+}
+
+.bottom_menu >ul>li{
+    width: 128px;
+    text-align: center;
+    border-collapse:collapse;
+    float: left;
+    margin: 20px 0;
+}
+.main{
+    width: auto;
+    height: 100%;
+}
+.timer{
+    width: auto;
+    height:25%;
+    background-color: aqua;
+}
+.best{
+    width: auto;
+    height:25%;
+    background-color: rgb(90, 25, 203);
+}
+.best ul>li{
+    width: 18%;
+    height: 130px;
+    background-color: blue;
+    float: left;
+    text-align: center;
+    margin:0 48px;
+}
+.rec_book{
+    width: auto;
+    height: 50%;
+    background-color: bisque;
+}
