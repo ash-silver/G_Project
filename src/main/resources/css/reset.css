@@ -1,0 +1,48 @@
+/*CSS 초기화태그들이 가지고 있는 기본속성과 값을 코딩하기 편한 값으로 변경*/
+body,h1,h2,h3,p,div,ul,li,dl,dt,dd{
+    margin:0;
+    padding:0
+}
+body {
+    font-family: 'Capriola','Noto Sans KR', sans-serif;
+    /* font-family: 'Capriola', sans-serif; */
+    font-size: 16px;
+    line-height: 1.5;
+    width: 640px;
+    height: 100%;
+    margin: auto;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 7px 29px 0 hsla(240,5%,41%,.2);
+}
+html{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(238, 238, 238);
+}
+
+.top{
+    font-size: 20px;
+}    
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+  
+ul,
+li {
+    list-style: none;
+}
+
+address {
+    font-style: normal;
+}
+
+.hide {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
