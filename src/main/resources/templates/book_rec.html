@@ -9,7 +9,12 @@
     <link rel="stylesheet" href="../css/reset.css">
     <title>책 추천</title>
 </head>
+
 <script type="text/javascript">
+    // 헤더
+    $(function(){
+        $("#header").load("header.html");
+    })
     var num = 1; //문제 번호 
     var q = { //질문 데이터
         1: {"title": "1번 문제", "type": "category", "A": "소설",   "B": "정보를 주는"},
@@ -71,6 +76,7 @@
 
 </script>
 <body>
+    <div id="header"></div>
     <div class="start">
         <!-- 시작 페이지 누르면 질문 페이지 짜란 -->
         <h1>오늘 읽고 싶은 책은?</h1>

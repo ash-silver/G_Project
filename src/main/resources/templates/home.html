@@ -3,26 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/reset.css">
     <title>Home</title>
+    <script>
+        $(function(){
+            $("#header").load("header.html");
+        })
+    </script>
 </head>
 <body>
-    <div class="header">
+    <div id="header"></div>
+    <!-- <div class="header">
          <nav class="bottom_menu">
             <ul>
                 <li><a href="./home.html">홈</a></li>
                 <li><a href="">타이머</a></li>
-                <li><a href="./book_report.html">독후감</a></li>
+                <li><a href="./report_list.html">독후감</a></li>
                 <li><a href="">찜</a></li>
                 <li><a href="">마이페이지</a></li>
             </ul>
         </nav>
-    </div>
+    </div> -->
+    <!-- header코드 분리 -->
    
 
     <div class="main">
+            
         <div class="timer">
+            <p>00님 안녕하세요!!</p>
             <p>오늘의 독서량</p>
             <p>00:00:00</p>
         </div>
