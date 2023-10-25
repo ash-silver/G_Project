@@ -1,6 +1,5 @@
 package com.example.g_project.dto;
 
-import com.example.g_project.entity.Member;
 import lombok.Getter;
 import lombok.ToString;
 
