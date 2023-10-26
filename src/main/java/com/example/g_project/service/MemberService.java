@@ -16,5 +16,9 @@ public class MemberService {
         return memberRepository.save(request.memberEntity()).getMember_email();
     }
 
+    public MemberResponse hasMember(MemberRequest request){
+        return memberRepository.findByEmail(request.getMember_email())
+                .filter(member -> member.)
+    }
 
 }

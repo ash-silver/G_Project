@@ -1,7 +1,9 @@
 package com.example.g_project.controller;
 
 import com.example.g_project.dto.MemberRequest;
+import com.example.g_project.dto.MemberResponse;
 import com.example.g_project.service.MemberService;
+import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,5 +27,9 @@ public class MemberController {
         memberService.createMember(request);
         System.out.println("ashsilver");
         return "index";
+    }
+    @PostMapping("/login")
+    public String hasMember(MemberRequest request, HttpSession session){
+        MemberResponse findMember = memberService.hasMember(request);
     }
 }
