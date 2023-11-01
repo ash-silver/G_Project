@@ -14,12 +14,12 @@ public class MemberService {
 
     @Transactional
     public String createMember(MemberRequest request){
-        return memberRepository.save(request.memberEntity()).getMember_email();
+        return memberRepository.save(request.memberEntity()).getMemberEmail();
     }
 
     public MemberResponse hasMember(MemberRequest request){
-        return memberRepository.findByEmail(request.getMember_email())
-                .filter(member -> member.getMember_password().equals(request.getMember_password()))
+        return memberRepository.findByMemberEmail(request.getMember_email())
+                .filter(member -> member.getMemberPassword().equals(request.getMember_password()))
                 .map(member -> new MemberResponse(member)).orElse(null);
     }
 

@@ -18,15 +18,11 @@ public class MemberController {
     private static Long member_CD;
     @GetMapping("/join")
     public String loadMemberForm(){
-        System.out.println("ashsilver");
-
         return "join";
     }
     @PostMapping("/join")
     public String createMember(MemberRequest request){
-        System.out.println("helloworld");
         memberService.createMember(request);
-        System.out.println("ashsilver");
         return "index";
     }
     @PostMapping("/login")
@@ -36,6 +32,7 @@ public class MemberController {
             session.setAttribute("member_email", findMember.getMember_email());
             session.setAttribute("member_CD", findMember.getMember_CD());
             member_CD=findMember.getMember_CD();
+            System.out.println("hello");
             return "redirect:/home";
         }
         return "login";
