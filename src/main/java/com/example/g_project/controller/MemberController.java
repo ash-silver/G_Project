@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequiredArgsConstructor
 public class MemberController {
     private final MemberService memberService;
+    private static Long member_CD;
     @GetMapping("/join")
     public String loadMemberForm(){
         System.out.println("ashsilver");
@@ -31,5 +32,13 @@ public class MemberController {
     @PostMapping("/login")
     public String hasMember(MemberRequest request, HttpSession session){
         MemberResponse findMember = memberService.hasMember(request);
+        if(findMember != null){
+            session.setAttribute("member_email", findMember.getMember_email());
+            session.setAttribute("member_CD", findMember.getMember_CD());
+            member_CD=findMember.getMember_CD();
+            return "redirect:/home";
+        }
+        return "login";
     }
+
 }
