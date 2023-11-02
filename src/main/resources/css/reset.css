@@ -23,21 +23,17 @@ html{
 .top{
     font-size: 20px;
 }    
-
 a {
     text-decoration: none;
     color: #000;
 }
-  
 ul,
 li {
     list-style: none;
 }
-
 address {
     font-style: normal;
 }
-
 .hide {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -45,4 +41,45 @@ address {
     height: 1px;
     margin: -1px;
     overflow: hidden;
+}
+.flex-container{
+    display: inline-flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+.flex-item a{
+    margin: auto;
+    justify-content: space-around;
+}
+.bottom_menu .home a{
+    width: 55px;
+    height: 60px;
+    display: block;
+    background: url("../images/home.png")no-repeat;
+    text-indent: -9999px;
+    text-align: center;
+}
+.bottom_menu .timer a{
+    width: 55px;
+    height: 60px;
+    text-indent: -9999px;
+    display: block;
+    background: url("../images/timer.png")no-repeat;
+    text-align: center;
+}
+.bottom_menu .book a{
+    width: 55px;
+    height: 60px;
+    display: block;
+    background: url("../images/book.png")no-repeat;
+    text-indent: -9999px;
+    text-align: center;
+}
+.bottom_menu .mypage a{
+    width: 55px;
+    height: 60px;
+    text-indent: -9999px;
+    display: block;
+    background: url("../images/mypage.png")no-repeat;
+    text-align: center;
 }
