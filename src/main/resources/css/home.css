@@ -5,9 +5,11 @@ header{
     width: 640px;
     position: fixed;
     bottom: 0px;
-    background-color: #b24040;
+    background-color: #020202;
     
 }
+
+
 
 .bottom_menu >ul>li{
     width: 128px;
@@ -19,27 +21,81 @@ header{
 .main{
     width: auto;
     height: 100%;
+    
+}
+.main_img{
+    width: 100%;
+    height: 180px;
+    
+    display: block;
+    position: relative;
 }
 .timer{
-    width: auto;
-    height:25%;
-    background-color: aqua;
+    width: 100%;
+    height:300px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+.timer_text{
+    position: relative;
+    color: white;
+    font-weight: bold;
+    padding-top: 70px;
+    font-size:30px;
+}
+.timer ::after{
+    width: 100%;
+    height:300px;
+    content: "";
+    background: url(../images/main.png) no-repeat;
+    background-size: 640px 240px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.5;
+    position: absolute;
+    filter: brightness(80%); 
 }
 .best{
     width: auto;
-    height:25%;
-    background-color: rgb(90, 25, 203);
+    height:300px;
+    background-color:rgb(225, 225, 225);
+    position: relative;
+    margin-top: -60px;
+}
+.b_txt1{
+    font-size: 30px;
+    padding-top: 20px;
+    margin-left:40px ;
+    color: #138E10;
+    font-weight: bold;
+}
+.b_txt2{
+    font-size: 24px;
+    margin-left: 40px ;
+    padding-top: 10px;
+}
+.b_txt3{
+    font-size: 24px;
+    margin-left: 40px ;
+    padding-top: 20px;
+}
+.best ul{
+    height: 200px;
+    margin-top: 50px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
 }
 .best ul>li{
     width: 18%;
     height: 130px;
-    background-color: blue;
+    background-color: rgb(201, 201, 201);
     float: left;
     text-align: center;
-    margin:0 48px;
+    margin:20px 48px;
 }
 .rec_book{
     width: auto;
-    height: 50%;
-    background-color: bisque;
+    height: 500px;
 }
