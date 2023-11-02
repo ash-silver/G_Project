@@ -1,6 +1,7 @@
 package com.example.g_project.service;
 
 import com.example.g_project.dto.MemberRequest;
+import com.example.g_project.dto.MemberResponse;
 import com.example.g_project.entity.MemberRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
@@ -13,8 +14,13 @@ public class MemberService {
 
     @Transactional
     public String createMember(MemberRequest request){
-        return memberRepository.save(request.memberEntity()).getMember_email();
+        return memberRepository.save(request.memberEntity()).getMemberEmail();
     }
 
+    public MemberResponse hasMember(MemberRequest request){
+        return memberRepository.findByMemberEmail(request.getMember_email())
+                .filter(member -> member.getMemberPassword().equals(request.getMember_password()))
+                .map(member -> new MemberResponse(member)).orElse(null);
+    }
 
 }

@@ -13,4 +13,12 @@ public class MemberResponse {
     private String member_gender;
     private Long member_CD;
 
+    public MemberResponse(Member entity){
+        this.member_CD= entity.getMemberCD();
+        this.member_email=entity.getMemberEmail();
+        this.member_password=entity.getMemberPassword();
+        this.member_nickname=entity.getMemberNickname();
+        this.member_gender=entity.getMemberGender();
+    }
+
 }

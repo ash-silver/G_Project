@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>git test - ashsilver</h1>
-    <form name="login_form" th:action="@{/members/login}" th:method="post" onsubmit="">
+    <form name="login_form" th:action="@{/members/login}" th:method="post" <!--onsubmit="onclick()"-->>
         <fieldset>
 
             <legend class="top">우리 앱? 이름에 오신걸 환영합니다</legend>
@@ -28,9 +28,9 @@
 
             </div>
             <div class="login_bt">
-                <button>로그인 하기</button> 
+                <button type="submit">로그인</button>
             <div class="join">
-                <a href="./join.html">회원가입 하기</a>
+                <a href="members/join">회원가입 하기</a>
             </div> 
             
 

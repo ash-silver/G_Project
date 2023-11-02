@@ -9,4 +9,9 @@ public class IndexController {
     public String loadMain(){
         return "index";
     }
+
+    @GetMapping("/home")
+    public String home(){
+        return "home";
+    }
 }
