@@ -6,19 +6,8 @@ header{
     position: fixed;
     bottom: 0px;
     background-color: #020202;
-    
 }
 
-
-
-
-.bottom_menu >ul>li{
-    width: 128px;
-    text-align: center;
-    border-collapse:collapse;
-    float: left;
-    margin: 20px 0;
-}
 .main{
     width: auto;
     height: 100%;
