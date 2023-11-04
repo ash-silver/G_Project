@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <link rel="stylesheet" href="../css/reset.css">ㄴ
+    <link rel="stylesheet" href="../static/css/reset.css">
     <title>접속 첫 페이지</title>
 </head>
 <body>
-    <h1>git test - ashsilver</h1>
-    <form name="login_form" th:action="@{/members/login}" th:method="post" <!--onsubmit="onclick()"-->>
+    <form name="login_form" th:action="@{/members/login}" th:method="post" ><!--onsubmit="onclick()"-->
         <fieldset>
 
             <legend class="top">우리 앱? 이름에 오신걸 환영합니다</legend>
@@ -29,6 +28,7 @@
             </div>
             <div class="login_bt">
                 <button type="submit">로그인</button>
+            </div>
             <div class="join">
                 <a href="members/join">회원가입 하기</a>
             </div> 

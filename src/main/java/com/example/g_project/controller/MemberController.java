@@ -32,10 +32,11 @@ public class MemberController {
             session.setAttribute("member_email", findMember.getMember_email());
             session.setAttribute("member_CD", findMember.getMember_CD());
             member_CD=findMember.getMember_CD();
-            System.out.println("hello");
             return "redirect:/home";
         }
-        return "login";
+        else{
+            return "login";
+        }
     }
 
 }
