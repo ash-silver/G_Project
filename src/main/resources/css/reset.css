@@ -34,6 +34,9 @@ li {
 address {
     font-style: normal;
 }
+.j_hide{
+    display: none;
+}
 .hide {
     position: absolute;
     clip: rect(0 0 0 0);

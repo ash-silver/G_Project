@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 이슈 해결(addEventListener을 부여할 DOM을 찾지 못함 -> 스크립트 파일 body 맨 밑에 넣음)  -->
+    <!-- 1.시작 정지 버튼 value값 바꿔서 실행하는걸루 수정하기. -->
+    <!-- 2.새로고침 기능 추가하기. 얘도 value 값 바꿔서,,? -->
+    <!-- 3. 정지 버튼 누르면 timer 값 db로 보내기....? -->
+    <span class="time">00:00:00</span>
+    <input class="startBtn" type="button" value="start">
+    <input class="stopBtn" type="button" value="stop">
+
+    <script>
+        const timer = document.querySelector('.time'),
+            stopBtn=document.querySelector('.stopBtn'),
+            startBtn=document.querySelector('.startBtn')
+        let TIME =0;
+        let cron;
+        function startButton(){
+            updateTimer();
+            stopButton();
+            cron = setInterval(updateTimer,1000);
+            startBtn.classList.add('j_hide');
+        }
+        function stopButton(){
+            clearInterval(cron);
+            startBtn.classList.remove('j_hide');
+        }
+        function updateTimer(){
+            const hour = Math.floor(TIME/3600);
+            const checkMin = Math.floor(TIME/60);
+            const sec = TIME % 60;
+            const min = checkMin %60;
+// 자바스크립트 시간 표시 방법
+            timer.innerText = `${hour < 10 ? `0${hour}` : hour}:${
+                min < 10 ? `0${min}` : min}:${
+                sec < 10 ? `0${sec}` : sec}`;
+            TIME++;
+        }
+        startBtn.addEventListener('click', startButton);
+        stopBtn.addEventListener('click', stopButton);
+    </script>
+</body>
+</html>
