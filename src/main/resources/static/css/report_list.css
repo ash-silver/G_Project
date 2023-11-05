@@ -1,0 +1,48 @@
+header{
+    position: relative
+}
+.bottom_menu{
+    width: 640px;
+    position: fixed;
+    bottom: 0px;
+    background-color: #020202;
+}
+.main{
+    position: relative;
+}
+
+.top{
+    position: relative;
+    width: auto;
+    height: 180px;
+    background-color: rgb(243, 230, 238);
+    border-radius: 0 0 50px 0;
+    padding-left:20px ;
+}
+.top h1{
+    font-size: 40px;
+    padding-top:30px;
+    padding-bottom: 10px;
+}
+.write a{
+    display: block;
+    position: relative;
+    top: -120px;   
+    left: 500px; 
+    font-size: 20px;
+}
+.list{
+    display: inline-flex;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.list li{
+    width: 164px;
+    height: 220px;
+    background-color: rgb(223, 232, 240);
+    margin: auto;
+    margin-bottom: 30px;
+    justify-content: space-around;
+}
+
