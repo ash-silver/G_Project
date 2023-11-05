@@ -10,6 +10,7 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="header"></div>
     <!-- 이슈 해결(addEventListener을 부여할 DOM을 찾지 못함 -> 스크립트 파일 body 맨 밑에 넣음)  -->
     <!-- 1.시작 정지 버튼 value값 바꿔서 실행하는걸루 수정하기. -->
     <!-- 2.새로고침 기능 추가하기. 얘도 value 값 바꿔서,,? -->
@@ -19,6 +20,9 @@
     <input class="stopBtn" type="button" value="stop">
 
     <script>
+        $(function(){
+            $("#header").load("header.html");
+        })
         const timer = document.querySelector('.time'),
             stopBtn=document.querySelector('.stopBtn'),
             startBtn=document.querySelector('.startBtn')
