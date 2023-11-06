@@ -1,5 +1,6 @@
 package com.example.g_project.controller;
 
+import com.example.g_project.dto.ReadingRequest;
 import com.example.g_project.service.ReadingService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -14,7 +15,8 @@ public class ReadingController {
 
 
     @PostMapping("/write")
-    public String bookWrite(){
-        readingService.
+    public String bookWrite(ReadingRequest request){
+        readingService.createReading(request);
+        return "report_write";
     }
 }
