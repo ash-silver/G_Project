@@ -7,36 +7,46 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link rel="stylesheet" href="../static/css/home.css">
     <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/timer.css">
     <title>Document</title>
 </head>
 <body>
     <div id="header"></div>
     <!-- 이슈 해결(addEventListener을 부여할 DOM을 찾지 못함 -> 스크립트 파일 body 맨 밑에 넣음)  -->
-    <!-- 1.시작 정지 버튼 value값 바꿔서 실행하는걸루 수정하기. -->
-    <!-- 2.새로고침 기능 추가하기. 얘도 value 값 바꿔서,,? -->
+
     <!-- 3. 정지 버튼 누르면 timer 값 db로 보내기....? -->
-    <span class="time">00:00:00</span>
-    <input class="startBtn" type="button" value="start">
-    <input class="stopBtn" type="button" value="stop">
+    <form action="" method="">
+        <legend>오늘의 독서 시간</legend>
+        <div class="timer_wrap">
+            <p class="time">00:00:00</p>
+            <div class="btn">
+                <input class="start_btn" type="button" value="start">
+                <input class="stop_btn j_hide" type="button" value="stop">
+            </div>
+        </div>
+    </form>
 
     <script>
         $(function(){
             $("#header").load("header.html");
         })
         const timer = document.querySelector('.time'),
-            stopBtn=document.querySelector('.stopBtn'),
-            startBtn=document.querySelector('.startBtn')
+        startBtn=document.querySelector('.start_btn'),
+        stopBtn=document.querySelector('.stop_btn');
         let TIME =0;
         let cron;
         function startButton(){
             updateTimer();
-            stopButton();
+            // stopButton();
             cron = setInterval(updateTimer,1000);
             startBtn.classList.add('j_hide');
+            stopBtn.classList.remove('j_hide');
         }
         function stopButton(){
             clearInterval(cron);
             startBtn.classList.remove('j_hide');
+            stopBtn.classList.add('j_hide');
+
         }
         function updateTimer(){
             const hour = Math.floor(TIME/3600);
