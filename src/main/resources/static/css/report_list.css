@@ -32,9 +32,9 @@ header{
     font-size: 20px;
 }
 .list{
-    display: inline-flex;
+    width: 640px;
+    height: auto;
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
 }
 .list li{
@@ -43,6 +43,12 @@ header{
     background-color: rgb(223, 232, 240);
     margin: auto;
     margin-bottom: 30px;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    justify-content:flex-start;
+}
+.list li a{
+    width: 164px;
+    height: 220px;
+    display: block;
 }
 

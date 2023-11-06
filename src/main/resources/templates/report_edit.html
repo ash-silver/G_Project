@@ -7,7 +7,7 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link rel="stylesheet" href="../static/css/home.css">
     <link rel="stylesheet" href="../static/css/reset.css">
-    <link rel="stylesheet" href="../static/css/report_view.css">
+    <link rel="stylesheet" href="../static/css/report_edit.css">
     <title>독후감</title>
     <script>
         $(function(){
@@ -17,7 +17,7 @@
 </head>
 <body>
     <div id="header"></div>
-    <form class="report_view" action="" method="">
+    <form class="report_edit" action="" method="">
         <fieldset>
             <legend>기록하고 기억하는 <br> 독서 기록장</legend>
 
@@ -46,12 +46,12 @@
                 <label for="content">인상깊은 구절</label>
                 <input name="impressive" id="impressive" cols="50" rows="20"></input>
             </div>
-            <p class="edit_button">
-                <a href="../templates/report_edit.html">수정하기</a>
+            <p class="button">
+                <button type="submit">등록하기</button>
             </p>
+
         </fieldset>
     </form>
-   
     
 </body>
 </html>

@@ -1,0 +1,44 @@
+fieldset{
+    border: none;
+    padding: 20px;
+    font-size: 20px;
+
+}
+legend{
+    font-size: 40px;
+    font-weight: bold;
+}
+label{
+    width: 100px;
+    margin: auto;
+    text-align: center;
+    display: inline-block;
+}
+input{
+    width: 160px;
+    height: 40px;
+    border: none;
+    font-size: 18px;
+    margin: 18px 0;
+    border: 1px solid #c5c5c5;
+    border-radius: 5px;
+    padding: 0;
+    vertical-align: middle;
+    padding-left: 10px;
+}
+.title input{
+    width: 440px;
+}
+.author{
+    float: left;
+}
+.reading_day input{
+    width: 200px;
+}
+.impressive input{
+    width: 440px;
+}
+.content label{
+    position: relative;
+    top:-140px
+}
