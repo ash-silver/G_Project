@@ -12,7 +12,7 @@ public class ReadingService {
     private final ReadingRepository readingRepository;
 
     @Transactional
-    public String createReading(ReadingRequest request){
+    public Long createReading(ReadingRequest request){
         return readingRepository.save(request.readingEntity()).getReadingCD();
     }
 }

@@ -11,13 +11,25 @@ import java.time.LocalDateTime;
 public class ReadingRequest {
     private Long memberCD;
     private Long bookCD;
+    private String readingAuthor;
+    private String readingPublisher;
+    private String readingStart;
+    private String readingEnd;
+    private String readingTitle;
     private String readingContent;
+    private String readingImpressive;
 
     public Reading readingEntity(){
         return Reading.builder()
                 .memberCD(memberCD)
                 .bookCD(bookCD)
-                .readingContent(readingContent)
+                .readingAuthor(readingAuthor)
+                .readingAuthor(readingPublisher)
+                .readingAuthor(readingStart)
+                .readingAuthor(readingEnd)
+                .readingAuthor(readingTitle)
+                .readingAuthor(readingContent)
+                .readingContent(readingImpressive)
                 .build();
     }
 }

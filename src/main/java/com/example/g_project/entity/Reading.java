@@ -13,38 +13,61 @@ import java.time.LocalDateTime;
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@Table(name="tb_reading")
+@Table(name = "tb_reading")
 public class Reading {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="reading_CD")
+    @Column(name = "reading_CD")
     private Long readingCD;
-    @Column(name="member_CD", nullable=false)
+    @Column(name = "member_CD")
     private Long memberCD;
 
-    @Column(name="book_CD")
+    @Column(name = "book_CD")
     private Long bookCD;
 
-    @Column(name="reading_content")
+    @Column(name = "reading_author")
+    private String readingAuthor;
+    @Column(name = "reading_publisher")
+    private String readingPublisher;
+    @Column(name = "reading_start")
+    private String readingStart;
+    @Column(name = "reading_end")
+    private String readingEnd;
+    @Column(name = "reading_title")
+    private String readingTitle;
+    @Column(name = "reading_content")
     private String readingContent;
+    @Column(name = "reading_impressive")
+    private String readingImpressive;
 
     @CreationTimestamp
-    @Column(name="reading_DT", nullable = false)
+    @Column(name = "reading_DT", nullable = false)
     private LocalDateTime readingRegister = LocalDateTime.now();
 
     @Builder
     public Reading(Long readingCD
             , Long memberCD
             , Long bookCD
+            , String readingAuthor
+            , String readingPublisher
+            , String readingStart
+            , String readingEnd
+            , String readingTitle
             , String readingContent
-            , LocalDateTime readingRegister){
-        this.readingCD=readingCD;
-        this.memberCD=memberCD;
-        this.bookCD=bookCD;
-        this.readingContent=readingContent;
-        this.readingRegister=readingRegister;
+            , String readingImpressive
+            , LocalDateTime readingRegister) {
+        this.readingCD = readingCD;
+        this.memberCD = memberCD;
+        this.bookCD = bookCD;
+        this.readingAuthor = readingAuthor;
+        this.readingPublisher = readingPublisher;
+        this.readingStart = readingStart;
+        this.readingEnd = readingEnd;
+        this.readingTitle = readingTitle;
+        this.readingContent = readingContent;
+        this.readingImpressive = readingImpressive;
+        this.readingRegister = readingRegister;
     }
-
 
 
 }

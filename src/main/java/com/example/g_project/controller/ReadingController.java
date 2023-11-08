@@ -4,6 +4,7 @@ import com.example.g_project.dto.ReadingRequest;
 import com.example.g_project.service.ReadingService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -14,9 +15,13 @@ public class ReadingController {
     private final ReadingService readingService;
 
 
+    @GetMapping("/write")
+    public String readingWriteForm(){
+        return "report_write";
+    }
     @PostMapping("/write")
     public String bookWrite(ReadingRequest request){
         readingService.createReading(request);
-        return "report_write";
+        return "home";
     }
 }

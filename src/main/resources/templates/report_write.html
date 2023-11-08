@@ -17,7 +17,7 @@
 </head>
 <body>
     <div id="header"></div>
-    <form class="report_write" action="" method="">
+    <form class="report_write" th:action="@{/book/write}" th:method="post">
         <fieldset>
             <legend>기록하고 기억하는 <br> 독서 기록장</legend>
 
@@ -44,7 +44,7 @@
             </div>
             <div class="impressive">
                 <label for="content">인상깊은 구절</label>
-                <input name="impressive" id="impressive" cols="50" rows="20"></input>
+                <input name="impressive" id="impressive" cols="50" rows="20">
             </div>
             <p class="button">
                 <button type="submit">등록하기</button>
