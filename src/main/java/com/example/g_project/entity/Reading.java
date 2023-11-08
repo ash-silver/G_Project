@@ -17,27 +17,27 @@ import java.time.LocalDateTime;
 public class Reading {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "reading_CD")
+    @Column(name = "readingCD")
     private int readingCD;
-    @Column(name = "member_CD")
+    @Column(name = "memberCD")
     private int memberCD;
 
-    @Column(name = "book_CD")
+    @Column(name = "bookCD")
     private int bookCD;
 
-    @Column(name = "reading_author")
+    @Column(name = "readingAuthor")
     private String readingAuthor;
-    @Column(name = "reading_publisher")
+    @Column(name = "readingPublisher")
     private String readingPublisher;
-    @Column(name = "reading_start")
+    @Column(name = "readingStart")
     private String readingStart;
-    @Column(name = "reading_end")
+    @Column(name = "readingEnd")
     private String readingEnd;
-    @Column(name = "reading_title")
+    @Column(name = "readingTitle")
     private String readingTitle;
-    @Column(name = "reading_content")
+    @Column(name = "readingContent")
     private String readingContent;
-    @Column(name = "reading_impressive")
+    @Column(name = "readingImpressive")
     private String readingImpressive;
 
     @CreationTimestamp
