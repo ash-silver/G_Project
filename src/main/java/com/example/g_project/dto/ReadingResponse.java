@@ -7,9 +7,9 @@ import lombok.ToString;
 @Getter
 @ToString
 public class ReadingResponse {
-    private Long readingCD;
-    private Long memberCD;
-    private Long bookCD;
+    private int readingCD;
+    private int memberCD;
+    private int bookCD;
     private String readingAuthor;
     private String readingPublisher;
     private String readingStart;

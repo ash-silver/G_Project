@@ -9,8 +9,8 @@ import java.time.LocalDateTime;
 @Data
 @NoArgsConstructor
 public class ReadingRequest {
-    private Long memberCD;
-    private Long bookCD;
+    private int memberCD;
+    private int bookCD;
     private String readingAuthor;
     private String readingPublisher;
     private String readingStart;

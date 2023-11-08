@@ -18,12 +18,12 @@ public class Reading {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "reading_CD")
-    private Long readingCD;
+    private int readingCD;
     @Column(name = "member_CD")
-    private Long memberCD;
+    private int memberCD;
 
     @Column(name = "book_CD")
-    private Long bookCD;
+    private int bookCD;
 
     @Column(name = "reading_author")
     private String readingAuthor;
@@ -45,9 +45,9 @@ public class Reading {
     private LocalDateTime readingRegister = LocalDateTime.now();
 
     @Builder
-    public Reading(Long readingCD
-            , Long memberCD
-            , Long bookCD
+    public Reading(int readingCD
+            , int memberCD
+            , int bookCD
             , String readingAuthor
             , String readingPublisher
             , String readingStart
