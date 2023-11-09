@@ -20,7 +20,6 @@ public class ReadingRequest {
     private String readingImpressive;
 
     public Reading readingEntity(){
-        System.out.println("request" + getReadingAuthor());
         return Reading.builder()
                 .memberCD(memberCD)
                 .bookCD(bookCD)

@@ -1,6 +1,7 @@
 package com.example.g_project.service;
 
 import com.example.g_project.dto.ReadingRequest;
+import com.example.g_project.dto.ReadingResponse;
 import com.example.g_project.entity.Reading;
 import com.example.g_project.entity.ReadingRepository;
 import jakarta.transaction.Transactional;
@@ -14,7 +15,10 @@ public class ReadingService {
 
     @Transactional
     public void createReading(ReadingRequest request){
-        System.out.println("service" + request.getReadingAuthor());
         readingRepository.save(request.readingEntity());
+    }
+
+    public ReadingResponse findReading(int readingId){
+        return new ReadingResponse(readingRepository.findByReadingCD(readingId));
     }
 }
