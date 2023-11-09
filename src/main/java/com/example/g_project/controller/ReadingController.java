@@ -21,7 +21,6 @@ public class ReadingController {
     }
     @PostMapping("/write")
     public String bookWrite(ReadingRequest request){
-        System.out.println(request.getReadingContent());
         readingService.createReading(request);
         return "home";
     }

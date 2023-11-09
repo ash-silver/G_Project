@@ -14,6 +14,7 @@ public class ReadingService {
 
     @Transactional
     public void createReading(ReadingRequest request){
+        System.out.println("service" + request.getReadingAuthor());
         readingRepository.save(request.readingEntity());
     }
 }

@@ -29,7 +29,7 @@ public class ReadingResponse {
         this.readingTitle = entity.getReadingTitle();
         this.readingContent = entity.getReadingContent();
         this.readingImpressive = entity.getReadingImpressive();
-
+        System.out.println("response" + getReadingAuthor());
     }
 
 }

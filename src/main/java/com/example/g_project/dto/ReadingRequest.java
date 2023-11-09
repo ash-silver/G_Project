@@ -20,16 +20,17 @@ public class ReadingRequest {
     private String readingImpressive;
 
     public Reading readingEntity(){
+        System.out.println("request" + getReadingAuthor());
         return Reading.builder()
                 .memberCD(memberCD)
                 .bookCD(bookCD)
                 .readingAuthor(readingAuthor)
-                .readingAuthor(readingPublisher)
-                .readingAuthor(readingStart)
-                .readingAuthor(readingEnd)
-                .readingAuthor(readingTitle)
-                .readingAuthor(readingContent)
-                .readingContent(readingImpressive)
+                .readingPublisher(readingPublisher)
+                .readingStart(readingStart)
+                .readingEnd(readingEnd)
+                .readingTitle(readingTitle)
+                .readingContent(readingContent)
+                .readingImpressive(readingImpressive)
                 .build();
     }
 }
