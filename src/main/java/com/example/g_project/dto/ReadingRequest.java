@@ -9,6 +9,8 @@ import java.time.LocalDateTime;
 @Data
 @NoArgsConstructor
 public class ReadingRequest {
+
+    private int readingCD;
     private int memberCD;
     private int bookCD;
     private String readingAuthor;
@@ -21,6 +23,7 @@ public class ReadingRequest {
 
     public Reading readingEntity(){
         return Reading.builder()
+                .readingCD(readingCD)
                 .memberCD(memberCD)
                 .bookCD(bookCD)
                 .readingAuthor(readingAuthor)

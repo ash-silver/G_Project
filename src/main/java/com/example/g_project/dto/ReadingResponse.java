@@ -4,8 +4,6 @@ import com.example.g_project.entity.Reading;
 import lombok.Getter;
 import lombok.ToString;
 
-import java.util.Optional;
-
 @Getter
 @ToString
 public class ReadingResponse {
@@ -20,7 +18,7 @@ public class ReadingResponse {
     private String readingContent;
     private String readingImpressive;
 
-    public ReadingResponse(Optional<Reading> entity){
+    public ReadingResponse(Reading entity){
         this.readingCD = entity.getReadingCD();
         this.memberCD = entity.getMemberCD();
         this.bookCD = entity.getBookCD();

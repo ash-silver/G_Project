@@ -18,7 +18,11 @@ public class ReadingService {
         readingRepository.save(request.readingEntity());
     }
 
-    public ReadingResponse findReading(int readingId){
-        return new ReadingResponse(readingRepository.findByReadingCD(readingId));
+//    public ReadingResponse findReading(int readingId){
+//        return new ReadingResponse(readingRepository.findByReadingCD(readingId));
+//    }
+
+    public ReadingResponse findById(int readingId){
+        return readingRepository.findByReadingCD(readingId);
     }
 }
