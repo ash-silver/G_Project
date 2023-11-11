@@ -6,19 +6,32 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
+<<<<<<< HEAD
+=======
+    <!-- <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/reset.css"> -->
+>>>>>>> bf787179bdcf0665812be05d77a59144fe5b24fa
     <link rel="stylesheet" href="../static/css/home.css">
     <link rel="stylesheet" href="../static/css/reset.css">
     <title>Home</title>
-    <script>
+    <!-- <script>
         $(function(){
-            $("#header").load("header.html");
+            $("#header").load("./header.html");
         })
-    </script>
+    </script> -->
 </head>
 <body>
 
 <!--    <header th:replace="header :: header"> </header>-->
-    <div id="header"></div>
+<div class="header">
+    <ul class="bottom_menu flex-container">
+        <li class="home flex-item"><a href="./home.html">홈</a></li>
+        <li class="timer flex-item"><a href="./timer.html">타이머</a></li>
+        <li class="book flex-item"><a href="./report_list.html">독후감</a></li>
+        <li class="mypage flex-item"><a href="">마이페이지</a></li>
+    </ul>
+</div>
+
 <!--     <div class="header">
          <nav class="bottom_menu">
             <ul>
@@ -51,7 +64,7 @@
             <p class="b_txt1">오늘의 인기도서</p>
             <p class="b_txt2">인기도서 목록을 확인해보세요.</p>
             <p class="b_txt3">Book List</p>
-            <a href="/book/write"><span class="rec_txt1">==-==독서록 쓰기-======</span> <br> <span class="rec_txt2">책 추천 받으러 가기</span></a>
+            <!-- <a href="/book/write"><span class="rec_txt1">==-==독서록 쓰기-======</span> <br> <span class="rec_txt2">책 추천 받으러 가기</span></a> -->
 
             <!-- 슬라이더 삽입 -->
             <ul>

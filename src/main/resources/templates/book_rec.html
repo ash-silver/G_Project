@@ -13,15 +13,15 @@
 
 <script type="text/javascript">
     // 헤더
-    $(function(){
-        $("#header").load("header.html");
-    })
+    // $(function(){
+    //     $("#header").load("header.html");
+    // })
     var num = 1; //문제 번호 
     var q = { //질문 데이터
-        1: {"title": "1번 문제", "type": "category", "A": "소설",   "B": "정보를 주는"},
+        1: {"title": "1번 문제", "type": "category", "A": "나는 가볍게 스토리 있는 소설을 읽고 싶어",   "B": "다양한 지식을 얻을 수 있는 책이 좋아"},
         2: {"title": "2번 문제", "type": "genre",    "A": "판타지", "B": "로맨스"},
-        3: {"title": "3번 문제", "type": "ending",   "A": "해피",   "B": "새드"},
-        4: {"title": "4번 문제", "type": "length",   "A": "장편",   "B": "단편"},
+        3: {"title": "3번 문제", "type": "ending",   "A": "책의 마무리는 해피엔딩이 최고지!",   "B": "새드"},
+        4: {"title": "4번 문제", "type": "length",   "A": "여러 시리즈로 길게 읽고 싶어",   "B": "한권으로 끝나는 책이 좋아!"},
         5: {"title": "5번 문제", "type": "length",   "A": "장편",   "B": "단편"}
     }
     
@@ -77,11 +77,27 @@
 
 </script>
 <body>
-    <div id="header"></div>
+    <div class="header">
+        <ul class="bottom_menu flex-container">
+            <li class="home flex-item"><a href="./home.html">홈</a></li>
+            <li class="timer flex-item"><a href="./timer.html">타이머</a></li>
+            <li class="book flex-item"><a href="./report_list.html">독후감</a></li>
+            <li class="mypage flex-item"><a href="">마이페이지</a></li>
+        </ul>
+ </div>
+ 
     <div class="start">
         <!-- 시작 페이지 누르면 질문 페이지 짜란 -->
-        <h1>오늘 읽고 싶은 책은?</h1>
-        <button type="button" onclick="start()">추천 받으러 가기</button>
+        <!-- <h1>오늘 읽고 싶은 책은?</h1> -->
+        <h1>책 추천 받기</h1>
+        <h3>오늘은 내 취향에 맞는 책을 읽고 싶은걸?</h3>
+
+        <p>"오늘은 해피하게 끝나는 가벼운 책을 읽고 싶어!"</p>
+        <p>"소설 책인데 단편인 책은 없을까?"</p>
+
+        <p>오늘 읽고 싶은 책이 있다면 간단한 질문으로 책을 추천받아보세요.</p>
+
+        <button class="go_rec" type="button" onclick="start()">추천 받으러 가기</button>
     </div> 
 
     <!-- 기존 코딩 -->
@@ -99,11 +115,14 @@
     <div class="question" >
         <form name="question_form" action="" method="post">
             <fieldset>
-                <h2 id="title">1번 문제</h2>
+                <p id="title">1번 문제</p>
 
                 <input id="type" type="hidden" value="category">
-                <button id="A" type="button">대답</button>
-                <button id="B" type="button">대답</button>
+                <div class="btn_wrap">
+                    <button class="ans1" id="A" type="button">대답</button>
+                    <button class="ans2" id="B" type="button">대답</button>
+                </div>
+
             </fieldset>
         </form>
     </div>
