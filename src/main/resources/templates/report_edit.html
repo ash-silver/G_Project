@@ -25,8 +25,7 @@
         </ul>
  </div>
  
-    <form class="report_edit" action="" th:method="post">
-        <fieldset>
+    <form class="report_edit" th:action="@{/path/book/reading/${readingId}}" th:method="post">
             <legend>기록하고 기억하는 <br> 독서 기록장</legend>
 
             <div class="title">
