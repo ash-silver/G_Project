@@ -34,10 +34,20 @@ public class ReadingController {
     @GetMapping("/reading/{readingId}")
     public String readingRead(@PathVariable int readingId, Model model){
         ReadingResponse reading = readingService.findById(readingId);
-        model.addAttribute("readingCD", "readingId");
+        model.addAttribute("title", reading.getReadingTitle());
+        model.addAttribute("author", reading.getReadingAuthor());
+        model.addAttribute("publisher", reading.getReadingPublisher());
+        model.addAttribute("start", reading.getReadingStart());
+        model.addAttribute("end", reading.getReadingEnd());
+        model.addAttribute("content", reading.getReadingContent());
+        model.addAttribute("impressive", reading.getReadingImpressive());
         return "report_view";
     }
 
+    @GetMapping("/recommand")
+    public String bookRecommand(){
+        return "book_rec";
+    }
 //    @GetMapping("/list")
 //    public String findReading(Model model, @PageableDefault(page = 0, size = 9, sort = "ReadingCD", direction = Sort.Direction.DESC) Pageable pageable){
 //        model.addAttribute("pagingProducts", pagingProducts);

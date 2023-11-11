@@ -23,6 +23,6 @@ public class ReadingService {
 //    }
 
     public ReadingResponse findById(int readingId){
-        return readingRepository.findByReadingCD(readingId);
+        return new ReadingResponse(readingRepository.findById(readingId));
     }
 }
