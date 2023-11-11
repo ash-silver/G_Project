@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequiredArgsConstructor
 public class ReadingController {
     private final ReadingService readingService;
+    private ReadingResponse reading;
 
 
     @GetMapping("/write")
@@ -33,7 +34,7 @@ public class ReadingController {
     }
     @GetMapping("/reading/{readingId}")
     public String readingRead(@PathVariable int readingId, Model model){
-        ReadingResponse reading = readingService.findById(readingId);
+        reading = readingService.findById(readingId);
         model.addAttribute("title", reading.getReadingTitle());
         model.addAttribute("author", reading.getReadingAuthor());
         model.addAttribute("publisher", reading.getReadingPublisher());
@@ -44,6 +45,19 @@ public class ReadingController {
         return "report_view";
     }
 
+    @GetMapping("/update/{readingId}")
+    public String bookUpdate(@PathVariable int readingId, Model model){
+        reading = readingService.findById(readingId);
+        model.addAttribute("title", reading.getReadingTitle());
+        model.addAttribute("author", reading.getReadingAuthor());
+        model.addAttribute("publisher", reading.getReadingPublisher());
+        model.addAttribute("start", reading.getReadingStart());
+        model.addAttribute("end", reading.getReadingEnd());
+        model.addAttribute("content", reading.getReadingContent());
+        model.addAttribute("impressive", reading.getReadingImpressive());
+
+        return "report_edit";
+    }
     @GetMapping("/recommand")
     public String bookRecommand(){
         return "book_rec";

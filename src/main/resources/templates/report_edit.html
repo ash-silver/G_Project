@@ -25,32 +25,38 @@
         </ul>
  </div>
  
-    <form class="report_edit" th:action="@{/path/book/reading/${readingId}}" th:method="post">
+    <form class="report_edit" th:action="@@{/book/reading/{readingId}}" th:method="post">
             <legend>기록하고 기억하는 <br> 독서 기록장</legend>
 
             <div class="title">
                 <label for="title">제목</label>
-                <input type="text" name="readingTitle" id="title">
+                <span th:text="${title}"></span>
             </div>
             <div class="author">
                 <label for="author">작가</label>
+                <span th:text="${author}"></span>
                 <input type="text" name="readingAuthor" id="author">
             </div>
             <div class="publisher">
                 <label for="publisher">출판사</label>
+                <span th:text="${publisher}"></span>
                 <input type="text" name="readingPublisher" id="publisher">
             </div>
             <div class="reading_day">
                 <label for="reading_day">독서 기간</label>
+                <span th:text="${start}"></span>
                 <input type="text" name="readingStart" id="start">  ~
+                <span th:text="${end}"></span>
                 <input type="text" name="readingEnd" id="end">
             </div>
             <div class="content">
                 <label for="content">내용</label>
+                <span th:text="${content}"></span>
                 <textarea name="readingContent" id="content" cols="61" rows="20"></textarea>
             </div>
             <div class="impressive">
                 <label for="content">인상깊은 구절</label>
+                <span th:text="${impressive}"></span>
                 <input name="readingImpressive" id="impressive" cols="50" rows="20"></input>
             </div>
             <p class="button">

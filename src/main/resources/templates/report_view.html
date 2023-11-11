@@ -20,7 +20,7 @@
             <li class="mypage flex-item"><a href="">마이페이지</a></li>
         </ul>
     </div>
-<form class="report_view" action="get">
+<form class="report_view" th:method="get">
     <fieldset>
         <legend>기록하고 기억하는 <br> 독서 기록장</legend>
 
@@ -49,7 +49,7 @@
             <span th:text="${impressive}"></span>
         </div>
         <p class="edit_button">
-            <a href="../templates/report_edit.html">수정하기</a>
+            <a href="book/update/{readingId}">수정하기</a>
         </p>
     </fieldset>
 </form>
