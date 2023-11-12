@@ -25,7 +25,8 @@
         </ul>
  </div>
  
-    <form class="report_edit" th:action="@@{/book/reading/{readingId}}" th:method="post">
+<!--    <form class="report_edit" th:action="|/book/reading/${findById[]}" th:method="put">-->
+    <form class="report_edit" th:action="|/book/reading/${id}|" th:method="put">
             <legend>기록하고 기억하는 <br> 독서 기록장</legend>
 
             <div class="title">
@@ -34,8 +35,8 @@
             </div>
             <div class="author">
                 <label for="author">작가</label>
-                <span th:text="${author}"></span>
-                <input type="text" name="readingAuthor" id="author">
+<!--                <span th:text="${author}"></span>-->
+                <input type="text" name="readingAuthor" placeholder="작가" th:value="${author}">
             </div>
             <div class="publisher">
                 <label for="publisher">출판사</label>
@@ -57,7 +58,7 @@
             <div class="impressive">
                 <label for="content">인상깊은 구절</label>
                 <span th:text="${impressive}"></span>
-                <input name="readingImpressive" id="impressive" cols="50" rows="20"></input>
+                <input name="readingImpressive" id="impressive" cols="50" rows="20">
             </div>
             <p class="button">
                 <button type="submit">등록하기</button>

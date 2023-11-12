@@ -10,10 +10,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/book")
@@ -45,9 +42,10 @@ public class ReadingController {
         return "report_view";
     }
 
-    @GetMapping("/update/{readingId}")
-    public String bookUpdate(@PathVariable int readingId, Model model){
+    @GetMapping ("/update/{readingId}")
+    public String bookUpdateForm(@PathVariable int readingId, Model model){
         reading = readingService.findById(readingId);
+        model.addAttribute("id", reading.getReadingCD());
         model.addAttribute("title", reading.getReadingTitle());
         model.addAttribute("author", reading.getReadingAuthor());
         model.addAttribute("publisher", reading.getReadingPublisher());
@@ -58,6 +56,8 @@ public class ReadingController {
 
         return "report_edit";
     }
+    @PutMapping("/update/{readingId}")
+    public String bookUp
     @GetMapping("/recommand")
     public String bookRecommand(){
         return "book_rec";
