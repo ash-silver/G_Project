@@ -19,10 +19,7 @@
             <li class="mypage flex-item"><a href="./mypage.html">마이페이지</a></li>
         </ul>
  </div>
- 
     <!-- 이슈 해결(addEventListener을 부여할 DOM을 찾지 못함 -> 스크립트 파일 body 맨 밑에 넣음)  -->
-
-    <!-- 3. 정지 버튼 누르면 timer 값 db로 보내기....? -->
     <form action="" method="">
         <legend>오늘의 독서 시간</legend>
         <div class="timer_wrap">
@@ -35,15 +32,15 @@
     </form>
 
     <script>
-        // $(function(){
-        //     $("#header").load("header.html");
-        // })
+        // localStorage.setItem("timer", timer);
+        // var loadedName = localStorage.getItem("timer");
         const timer = document.querySelector('.time'),
         startBtn=document.querySelector('.start_btn'),
         stopBtn=document.querySelector('.stop_btn');
         let TIME =0;
         let cron;
         function startButton(){
+            
             updateTimer();
             // stopButton();
             cron = setInterval(updateTimer,1000);
@@ -54,7 +51,6 @@
             clearInterval(cron);
             startBtn.classList.remove('j_hide');
             stopBtn.classList.add('j_hide');
-
         }
         function updateTimer(){
             const hour = Math.floor(TIME/3600);
@@ -66,7 +62,35 @@
                 min < 10 ? `0${min}` : min}:${
                 sec < 10 ? `0${sec}` : sec}`;
             TIME++;
-        }
+            // localStorage.setItem("timer", timer);
+            localStorage.setItem('timer', JSON.stringify(timer.innerText));
+            localStorage.setItem('TIME', TIME);
+            console.log(localStorage.getItem('TIME'));  
+
+            }
+        $(document).ready(function(){
+                // 현재 브라우저에서 WebStorage를 지원할 때
+                if (('localStorage' in window) && window['localStorage'] !== null) {
+                    // localStorage로 데이터 다시 불러오기
+                    if (localStorage.getItem('timer')) {
+                        timer.innerText = localStorage.getItem('timer');
+                        TIME=localStorage.getItem('TIME');
+                        // console.log(localStorage.getItem('timer'));  
+                    }
+                }
+        });
+            window.onpageshow = function (event) {
+            // 새로고침: window.performance.navigation.type == 1
+            // 뒤로가기: window.performance.navigation.type == 2
+                if (event.persisted || (window.performance && (window.performance.navigation.type == 1 || window.onload))) {
+                    if (('localStorage' in window) && window['localStorage'] !== null) {
+                        if (localStorage.getItem('timer')) {
+                            // timer.innerText = localStorage.getItem('timer');
+                            console.log(localStorage.getItem('timer'));  
+                        }
+                    }   
+                }
+            }
         startBtn.addEventListener('click', startButton);
         stopBtn.addEventListener('click', stopButton);
     </script>
