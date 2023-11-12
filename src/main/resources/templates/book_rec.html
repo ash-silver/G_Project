@@ -20,7 +20,7 @@
     var q = { //질문 데이터
         1: {"title": "1번 문제", "type": "category", "A": "나는 가볍게 스토리 있는 소설을 읽고 싶어",   "B": "다양한 지식을 얻을 수 있는 책이 좋아"},
         2: {"title": "2번 문제", "type": "genre",    "A": "판타지", "B": "로맨스"},
-        3: {"title": "3번 문제", "type": "ending",   "A": "책의 마무리는 해피엔딩이 최고지!",   "B": "새드"},
+        3: {"title": "3번 문제", "type": "ending",   "A": "책의 마무리는 해피엔딩이지", "B": "오늘은 슬픈 여운이 남는 책이 좋은걸?"},
         4: {"title": "4번 문제", "type": "length",   "A": "여러 시리즈로 길게 읽고 싶어",   "B": "한권으로 끝나는 책이 좋아!"},
         5: {"title": "5번 문제", "type": "length",   "A": "장편",   "B": "단편"}
     }
@@ -82,7 +82,7 @@
             <li class="home flex-item"><a href="./home.html">홈</a></li>
             <li class="timer flex-item"><a href="./timer.html">타이머</a></li>
             <li class="book flex-item"><a href="./report_list.html">독후감</a></li>
-            <li class="mypage flex-item"><a href="">마이페이지</a></li>
+            <li class="mypage flex-item"><a href="./mypage.html">마이페이지</a></li>
         </ul>
  </div>
  
@@ -90,26 +90,17 @@
         <!-- 시작 페이지 누르면 질문 페이지 짜란 -->
         <!-- <h1>오늘 읽고 싶은 책은?</h1> -->
         <h1>책 추천 받기</h1>
-        <h3>오늘은 내 취향에 맞는 책을 읽고 싶은걸?</h3>
+        <p class="txt_1">오늘은 내 취향에 맞는 책을 읽고 싶은걸?</p>
+        <img src="../static/images/book_rec.png" alt="책 이미지">
 
-        <p>"오늘은 해피하게 끝나는 가벼운 책을 읽고 싶어!"</p>
-        <p>"소설 책인데 단편인 책은 없을까?"</p>
+        <p class="txt_2">"오늘은 <strong>행복하게 끝나는 가벼운 책</strong>을 읽고 싶어!"</p>
+        <p class="txt_2">"<strong>소설 책인데 단편인 책</strong>은 없을까?"</p>
+        <p class="txt_3">오늘 읽고 싶은 책이 있다면 간단한 질문으로 <br>책을 추천받아보세요.</p>
 
-        <p>오늘 읽고 싶은 책이 있다면 간단한 질문으로 책을 추천받아보세요.</p>
+
 
         <button class="go_rec" type="button" onclick="start()">추천 받으러 가기</button>
     </div> 
-
-    <!-- 기존 코딩 -->
-    <!-- <div class="question" >
-        질문마다 버튼 선택하면 데이터 저장 후 넘기기.....
-        <h2 id="title">1번 문제</h2>
-        <input id="type" type="hidden" value="category">
-        <button id="A" type="button">대답</button>
-        <button id="B" type="button">대답</button>
-        <button id="C" type="button">대답</button>
-    </div> -->
-
 
     <!-- form 형식  -->
     <div class="question" >
