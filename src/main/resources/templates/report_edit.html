@@ -31,7 +31,8 @@
 
             <div class="title">
                 <label for="title">제목</label>
-                <span th:text="${title}"></span>
+                <!-- <span th:text="${title}"></span> -->
+                <input type="text" name="readingTitle" placeholder="제목" th:value="${title}">
             </div>
             <div class="author">
                 <label for="author">작가</label>
@@ -40,25 +41,25 @@
             </div>
             <div class="publisher">
                 <label for="publisher">출판사</label>
-                <span th:text="${publisher}"></span>
-                <input type="text" name="readingPublisher" id="publisher">
+                <!-- <span th:text="${publisher}"></span> -->
+                <input type="text" name="readingPublisher" placeholder="출판사" th:value="${publisher}">
             </div>
             <div class="reading_day">
                 <label for="reading_day">독서 기간</label>
-                <span th:text="${start}"></span>
-                <input type="text" name="readingStart" id="start">  ~
-                <span th:text="${end}"></span>
-                <input type="text" name="readingEnd" id="end">
+                <!-- <span th:text="${start}"></span> -->
+                <input type="text" name="readingStart" placeholder="시작날짜" th:value="${start}">  ~
+                <!-- <span th:text="${end}"></span> -->
+                <input type="text" name="readingEnd" placeholder="끝난날짜" th:value="${end}">
             </div>
             <div class="content">
                 <label for="content">내용</label>
-                <span th:text="${content}"></span>
-                <textarea name="readingContent" id="content" cols="61" rows="20"></textarea>
+                <!-- <span th:text="${content}"></span> -->
+                <textarea name="readingContent" placeholder="내용" th:value="${content}" cols="61" rows="20"></textarea>
             </div>
             <div class="impressive">
                 <label for="content">인상깊은 구절</label>
-                <span th:text="${impressive}"></span>
-                <input name="readingImpressive" id="impressive" cols="50" rows="20">
+                <!-- <span th:text="${impressive}"></span> -->
+                <input name="readingImpressive" placeholder="인상깊은 구절" th:value="${impressive}" cols="50" rows="20">
             </div>
             <p class="button">
                 <button type="submit">등록하기</button>
