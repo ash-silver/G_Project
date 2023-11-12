@@ -1,0 +1,19 @@
+.mypage_form{
+    margin: auto;
+    font-size: 24px;
+}
+fieldset{
+    border: none;
+}
+legend{
+    padding: 20px;
+    font-size: 40px;
+    font-weight: bold;
+}
+.mem_top{
+    padding: 100px;
+}
+.t_label{
+    padding: 30px;
+    display: inline-block;
+}
