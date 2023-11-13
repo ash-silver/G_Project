@@ -50,7 +50,7 @@ header{
 .best{
     width: auto;
     height:500px;
-    background-color:rgb(225, 225, 225);
+    background-color:rgb(239, 237, 231);
     position: relative;
     margin-top: -60px;
 }
@@ -71,21 +71,61 @@ header{
     margin-left: 40px ;
     padding-top: 20px;
 }
-.best ul{
+.best_slick{
     height: 306px;
     margin-top: 27px;
     background-color: rgb(255, 255, 255);
     border-radius:0 50px 0 0;
-    display: flex;
 }
-.best ul>li{
-    width: 140px;
-    height: 180px;
-    background-color: rgb(201, 201, 201);
-    text-align: center;
-    /* margin:20px 48px; */
-    justify-content: space-around;
+.best_slick li{    
+    margin-top: 40px;
+}
+.b_img1 a{
+    width: 160px;
+    height: 200px;
     margin: auto;
+    display: block;
+    background: url(../images/book1.png) no-repeat;
+    border-radius: 20px;
+    text-indent: -9999px;
+
+}
+.b_img2 a{
+    width: 160px;
+    height: 200px;
+    margin: auto;
+    display: block;
+    background: url(../images/book2.png)no-repeat;
+    border-radius: 20px;
+    text-indent: -9999px;
+
+}
+.b_img3 a{
+    width: 160px;
+    height: 200px;
+    margin: auto;
+    display: block;
+    background: url(../images/book3.png)no-repeat;
+    border-radius: 20px;
+    text-indent: -9999px;
+}
+.b_img4 a{
+    width: 160px;
+    height: 200px;
+    margin: auto;
+    display: block;
+    background: url(../images/book4.png)no-repeat;
+    border-radius: 20px;
+    text-indent: -9999px;
+}
+.b_img5 a{
+    width: 160px;
+    height: 200px;
+    margin: auto;
+    display: block;
+    background: url(../images/book5.png)no-repeat;
+    border-radius: 20px;
+    text-indent: -9999px;
 }
 .book_rec{
     width: 600px;
@@ -94,7 +134,7 @@ header{
     background: url(../images/book_rec.png) no-repeat ;
     background-position: 400px;
     display: block;
-    background-color: rgb(255, 242, 251);
+    background-color: rgb(246, 239, 239);
     border-radius:50px;
     
 }

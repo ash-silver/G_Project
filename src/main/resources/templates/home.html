@@ -7,6 +7,11 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link rel="stylesheet" href="../static/css/home.css">
     <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/slick-1.8.1/slick/slick.css">
+    <script src="../static/slick-1.8.1/slick/slick.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <title>Home</title>
     <script>
         $(document).ready(function(){
@@ -16,6 +21,15 @@
                     timer.innerText = localStorage.getItem('timer');
                 }
             }
+
+
+            $('.best_slick').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 1000,
+                arrows: false
+            });
         }); 
     </script>
 </head>
@@ -47,12 +61,14 @@
             <p class="b_txt2">인기도서 목록을 확인해보세요.</p>
             <p class="b_txt3">Book List</p>
             <!-- <a href="/book/write"><span class="rec_txt1">==-==독서록 쓰기-======</span> <br> <span class="rec_txt2">책 추천 받으러 가기</span></a> -->
-            <a href="book/write">========독서록 쓰기========</a>
+            <!-- <a href="book/write">========독서록 쓰기========</a> -->
             <!-- 슬라이더 삽입 -->
-            <ul>
-                <li>책1</li>
-                <li>책2</li>
-                <li>책3</li>
+            <ul class="best_slick">
+                <li class="b_img1"><a href="#">책1</a></li>
+                <li class="b_img2"><a href="#">책2</a></li>
+                <li class="b_img3"><a href="#">책3</a></li>
+                <li class="b_img4"><a href="#">책4</a></li>
+                <li class="b_img5"><a href="#">책5</a></li>
             </ul>
         </div>
         <div class="book_rec">
