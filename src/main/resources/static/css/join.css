@@ -1,4 +1,4 @@
-.login_form{
+.join_form{
     width: auto;
     height: auto;
     position: relative;
@@ -11,21 +11,15 @@ fieldset{
     margin: auto;
     
 }
-
-.top{
+legend{
     font-size: 34px;
-    margin: auto;
-    padding: 100px 0 160px 0;
-}    
-label{
+    margin:auto;
+    padding: 100px 0 80px 0;
+}  
+.n_label{
     display: none;
 }
-.line{
-    margin: auto;
-    text-align: center;
-    margin-bottom: 10px;
-}
-input{
+.s_input{
     width: 500px;
     height: 60px;
     font-size: 26px;
@@ -33,15 +27,16 @@ input{
     border-radius: 10px;
     border: 1px solid #cdcdcd;
 }
-.search{
-    font-size: 22px;
-}
-.login_bt{
+.line{
     margin: auto;
     text-align: center;
-    margin-top: 60px;
+    margin-bottom: 20px;
 }
-.login_bt button{
+
+
+
+
+.join_btn{
     width: 500px;
     height: 70px;
     margin: auto;
@@ -51,21 +46,20 @@ input{
     font-size: 26px;
     font-weight: bold;
     cursor: pointer;
+    display: block;
+    border-radius: 10px;
 }
-.join{
-    margin: auto;
-    text-align: center;
-}
-.join a{
+.back_btn{
     margin: auto;
     margin-top: 30px;
     display: block;
     width: 500px;
-    height: 60px;
+    height: 70px;
     border: 2px solid rgb(163, 9, 66);
+    background-color: white;
     font-size: 26px;
     font-weight: bold;
     cursor: pointer;
-    padding-top: 10px;
+    border-radius: 10px;
 
 }

@@ -6,7 +6,6 @@ body,h1,h2,h3,p,div,ul,li,dl,dt,dd{
 body {
     font-family: 'Capriola','Noto Sans KR', sans-serif;
     /* font-family: 'Capriola', sans-serif; */
-    font-size: 16px;
     line-height: 1.5;
     width: 640px;
     height: 1080px;
