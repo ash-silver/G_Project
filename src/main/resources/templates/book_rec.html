@@ -56,14 +56,34 @@
     //     // alert(a); 
     //     next();
     // })
+  
+    
     $(document).on("click", "#B, #A", function(){
         //클릭 정상 작동 확인용
-        var a=$(this).html() //스프링에 html요소로 전달 안될 수 있으니 변수 선언
+        // var a= $('#type').val(); 
+        // var b=$(this).attr('id');
+        // alert(a+' : '+b);
+        var arr = new Array();
+        var v = $(this).attr('id');
+        arr.push(v);
+        // makeArr(arr, v);
+        // console.log(arr);
+        localStorage.setItem('arr', JSON.stringify(arr));
+        console.log(localStorage.getItem('arr'));  
+        
+        // var a=$(this).html() //스프링에 html요소로 전달 안될 수 있으니 변수 선언
+        // function makeArr(array, val) {
+        //     var chk = array.indexOf(val);
+        //     array.push(val); 
+        // }
+ 
         if(num>5){
             $(".question").hide();
             $(".result").show();
         }
         next();
+         
+ 
     })
 
     // $("#A").click(function () {
@@ -74,6 +94,8 @@
     //     next();
     // });
     //- 클릭 이벤트 미발생 오류 해결 -  element가 나중에 생긴 경우에는 click 이벤트가 적용되지 않음
+
+    
 
 </script>
 <body>
