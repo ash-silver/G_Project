@@ -25,4 +25,10 @@ public class ReadingService {
     public ReadingResponse findById(int readingId){
         return new ReadingResponse(readingRepository.findById(readingId));
     }
+
+    public void updateReading(ReadingRequest request){
+//        Reading reading = readingRepository.findById(request.getReadingCD());
+        readingRepository.save(request.readingEntity());
+//        readingRepository.save(existingReading);
+    }
 }

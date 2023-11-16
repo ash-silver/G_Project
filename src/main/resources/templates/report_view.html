@@ -50,7 +50,8 @@
             <span th:text="${impressive}"></span>
         </div>
         <p class="edit_button">
-            <a href="book/update/{{readingId}}">수정하기</a>
+<!--            <a th:href="book/update/${readingId}">수정하기</a>-->
+            <a th:href="|../update/${readingId}|">수정하기</a>
         </p>
     </fieldset>
 </form>
