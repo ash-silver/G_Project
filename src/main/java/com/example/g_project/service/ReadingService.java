@@ -26,9 +26,16 @@ public class ReadingService {
         return new ReadingResponse(readingRepository.findById(readingId));
     }
 
-    public void updateReading(ReadingRequest request){
-//        Reading reading = readingRepository.findById(request.getReadingCD());
-        readingRepository.save(request.readingEntity());
-//        readingRepository.save(existingReading);
+    public void editReading(int readingId, ReadingRequest request) {
+        Reading entity = readingRepository.findById(readingId);
+        entity.ReadingUpdate(request.getMemberCD()
+                , request.getBookCD()
+                , request.getReadingAuthor()
+                , request.getReadingPublisher()
+                , request.getReadingStart()
+                , request.getReadingEnd()
+                , request.getReadingTitle()
+                , request.getReadingContent()
+                , request.getReadingImpressive());
     }
 }

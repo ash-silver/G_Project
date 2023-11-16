@@ -6,7 +6,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
-import org.springframework.cglib.core.Local;
+import org.hibernate.annotations.DynamicUpdate;
 
 import java.time.LocalDateTime;
 
@@ -69,5 +69,26 @@ public class Reading {
         this.readingRegister = readingRegister;
     }
 
+
+    public void ReadingUpdate(
+            int memberCD
+            , int bookCD
+            , String readingAuthor
+            , String readingPublisher
+            , String readingStart
+            , String readingEnd
+            , String readingTitle
+            , String readingContent
+            , String readingImpressive) {
+        this.memberCD = memberCD;
+        this.bookCD = bookCD;
+        this.readingAuthor = readingAuthor;
+        this.readingPublisher = readingPublisher;
+        this.readingStart = readingStart;
+        this.readingEnd = readingEnd;
+        this.readingTitle = readingTitle;
+        this.readingContent = readingContent;
+        this.readingImpressive = readingImpressive;
+    }
 
 }
