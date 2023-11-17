@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script type="text/javascript" src="http://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link rel="stylesheet" href="../static/css/book_rec.css">
@@ -12,79 +13,79 @@
 </head>
 
 <script type="text/javascript">
-    // 헤더
-    // $(function(){
-    //     $("#header").load("header.html");
-    // })
-    var num = 1; //문제 번호 
-    var q = { //질문 데이터
-        1: {"title": "1번 문제", "type": "category", "A": "나는 가볍게 스토리 있는 소설을 읽고 싶어",   "B": "다양한 지식을 얻을 수 있는 책이 좋아"},
-        2: {"title": "2번 문제", "type": "genre",    "A": "판타지", "B": "로맨스"},
-        3: {"title": "3번 문제", "type": "ending",   "A": "책의 마무리는 해피엔딩이지", "B": "오늘은 슬픈 여운이 남는 책이 좋은걸?"},
-        4: {"title": "4번 문제", "type": "length",   "A": "여러 시리즈로 길게 읽고 싶어",   "B": "한권으로 끝나는 책이 좋아!"},
-        5: {"title": "5번 문제", "type": "length",   "A": "장편",   "B": "단편"}
-    }
+    // // 헤더
+    // // $(function(){
+    // //     $("#header").load("header.html");
+    // // })
+    // var num = 1; //문제 번호 
+    // var q = { //질문 데이터
+    //     1: {"title": "1번 문제", "type": "category", "A": "나는 가볍게 스토리 있는 소설을 읽고 싶어",   "B": "다양한 지식을 얻을 수 있는 책이 좋아"},
+    //     2: {"title": "2번 문제", "type": "genre",    "A": "판타지", "B": "로맨스"},
+    //     3: {"title": "3번 문제", "type": "ending",   "A": "책의 마무리는 해피엔딩이지", "B": "오늘은 슬픈 여운이 남는 책이 좋은걸?"},
+    //     4: {"title": "4번 문제", "type": "length",   "A": "여러 시리즈로 길게 읽고 싶어",   "B": "한권으로 끝나는 책이 좋아!"},
+    //     5: {"title": "5번 문제", "type": "length",   "A": "장편",   "B": "단편"}
+    // }
     
-    function start(){ // 시작하기 누르면 시작페이지 사라지고 질문 보여주기
-        $(".start").hide();
-        $(".question").show();
-        $(".result").hide();
-        next();
-    }
-
-    function next() { //자동으로 질문 대답 변경 함수
-        // var Aanswer = $("#A").html();
-        // var Banswer = $("#B").html();
-
-        // $("#type").click(function(){
-        //     alert($(this).html());
-        // });
-       
-        $("#title").html(q[num]["title"]);  //num 가져와서 해당하는 n번 문제 title 텍스트 가져옴
-        $("#type").val(q[num]["type"]); 
-        $("#A").html(q[num]["A"]); 
-        $("#B").html(q[num]["B"]); 
-        // $("#C").html(q[num]["C"]); 
-        // alert(num);
-
-        num++;
-
-    }
-    // $(document).on("click", "#A", function(){
-    //     // 클릭 정상 작동 확인용 
-    //     var a=$(this).html() //스프링에 html요소로 전달 안될 수 있으니 변수 선언
-    //     // alert(a); 
+    // function start(){ // 시작하기 누르면 시작페이지 사라지고 질문 보여주기
+    //     $(".start").hide();
+    //     $(".question").show();
+    //     $(".result").hide();
     //     next();
-    // })
+    // }
+
+    // function next() { //자동으로 질문 대답 변경 함수
+    //     // var Aanswer = $("#A").html();
+    //     // var Banswer = $("#B").html();
+
+    //     // $("#type").click(function(){
+    //     //     alert($(this).html());
+    //     // });
+       
+    //     $("#title").html(q[num]["title"]);  //num 가져와서 해당하는 n번 문제 title 텍스트 가져옴
+    //     $("#type").val(q[num]["type"]); 
+    //     $("#A").html(q[num]["A"]); 
+    //     $("#B").html(q[num]["B"]); 
+    //     // $("#C").html(q[num]["C"]); 
+    //     // alert(num);
+
+    //     num++;
+
+    // }
+    // // $(document).on("click", "#A", function(){
+    // //     // 클릭 정상 작동 확인용 
+    // //     var a=$(this).html() //스프링에 html요소로 전달 안될 수 있으니 변수 선언
+    // //     // alert(a); 
+    // //     next();
+    // // })
   
     
-    $(document).on("click", "#B, #A", function(){
-        //클릭 정상 작동 확인용
-        // var a= $('#type').val(); 
-        // var b=$(this).attr('id');
-        // alert(a+' : '+b);
-        var arr = new Array();
-        var v = $(this).attr('id');
-        arr.push(v);
-        // makeArr(arr, v);
-        // console.log(arr);
-        localStorage.setItem('arr', JSON.stringify(arr));
-        console.log(localStorage.getItem('arr'));  
+    // $(document).on("click", "#B, #A", function(){
+    //     //클릭 정상 작동 확인용
+    //     // var a= $('#type').val(); 
+    //     // var b=$(this).attr('id');
+    //     // alert(a+' : '+b);
+    //     var arr = new Array();
+    //     var v = $(this).attr('id');
+    //     arr.push(v);
+    //     // makeArr(arr, v);
+    //     // console.log(arr);
+    //     localStorage.setItem('arr', JSON.stringify(arr));
+    //     console.log(localStorage.getItem('arr'));  
         
-        // var a=$(this).html() //스프링에 html요소로 전달 안될 수 있으니 변수 선언
-        // function makeArr(array, val) {
-        //     var chk = array.indexOf(val);
-        //     array.push(val); 
-        // }
+    //     // var a=$(this).html() //스프링에 html요소로 전달 안될 수 있으니 변수 선언
+    //     // function makeArr(array, val) {
+    //     //     var chk = array.indexOf(val);
+    //     //     array.push(val); 
+    //     // }
  
-        if(num>5){
-            $(".question").hide();
-            $(".result").show();
-        }
-        next();
+    //     if(num>5){
+    //         $(".question").hide();
+    //         $(".result").show();
+    //     }
+    //     next();
          
  
-    })
+    // })
 
     // $("#A").click(function () {
     //     next();
@@ -98,6 +99,7 @@
     
 
 </script>
+
 <body>
     <div class="header">
         <ul class="bottom_menu flex-container">
@@ -106,26 +108,30 @@
             <li class="book flex-item"><a href="./report_list.html">독후감</a></li>
             <li class="mypage flex-item"><a href="./mypage.html">마이페이지</a></li>
         </ul>
- </div>
- 
-    <div class="start">
+    </div>
+    <div class="start" id="main">
+        <!-- <h1>오늘 읽고 싶은 책은?</h1>  -->
+        <h1>책 추천 받기</h1>
+        <p class="txt_1">오늘은 내 취향에 맞는 책을 읽고 싶은걸?</p>
+        <img src="../static/images/book_rec.png" alt="책 이미지">
+        <p class="txt_2">"오늘은 <strong>행복하게 끝나는 가벼운 책</strong>을 읽고 싶어!"</p>
+        <p class="txt_2">"<strong>소설 책인데 단편인 책</strong>은 없을까?"</p>
+        <p class="txt_3">오늘 읽고 싶은 책이 있다면 간단한 질문으로 <br>책을 추천받아보세요.</p>
+        <button type="button" class="go_rec" onclick="js:start()">시작하기</button>
+    </div>
         <!-- 시작 페이지 누르면 질문 페이지 짜란 -->
         <!-- <h1>오늘 읽고 싶은 책은?</h1> -->
-        <h1>책 추천 받기</h1>
+        <!-- <h1>책 추천 받기</h1>
         <p class="txt_1">오늘은 내 취향에 맞는 책을 읽고 싶은걸?</p>
         <img src="../static/images/book_rec.png" alt="책 이미지">
 
         <p class="txt_2">"오늘은 <strong>행복하게 끝나는 가벼운 책</strong>을 읽고 싶어!"</p>
         <p class="txt_2">"<strong>소설 책인데 단편인 책</strong>은 없을까?"</p>
         <p class="txt_3">오늘 읽고 싶은 책이 있다면 간단한 질문으로 <br>책을 추천받아보세요.</p>
-
-
-
-        <button class="go_rec" type="button" onclick="start()">추천 받으러 가기</button>
-    </div> 
+        <button class="go_rec" type="button" onclick="start()">추천 받으러 가기</button> -->
 
     <!-- form 형식  -->
-    <div class="question" >
+    <!-- <div class="question" >
         <form name="question_form" action="" method="post">
             <fieldset>
                 <p id="title">1번 문제</p>
@@ -138,17 +144,45 @@
 
             </fieldset>
         </form>
+    </div> -->
+    <div id="question">
+        <div class="status">
+            <div class="status_bar">
+            </div>
+        </div>
+        <div class="q_box">
+
+        </div>
+        <div class="answer_box">
+
+        </div>
     </div>
 
-    <input type="hidden" id="category" value="0"><!--소설 vs 정보를 주는..?-->
-    <input type="hidden" id="genre" value="0"> <!--판타지 vs 로맨스 vs 스릴러-->
-    <input type="hidden" id="ending" value="0"><!--해피 vs 새드-->
-    <input type="hidden" id="length" value="0"><!--장편 vs 단편-->
+    <div id="result" class="">
+        <h1>오늘의 추천 책은?</h1>
+        <div class="result_name">
+        
+        </div>
+        <div id="result_img" class="">
+
+        </div>
+        <div class="result_desc">
+
+        </div>
+        <button type="button" class=" " onclick="">다시하기?</button>
+        <script src="../static/js/data.js" charset="utf-8"></script>
+        <script src="../static/js/start.js" charset="utf-8"></script>
+    </div>
+
+    <!-- <input type="hidden" id="category" value="0">
+    <input type="hidden" id="genre" value="0"> 
+    <input type="hidden" id="ending" value="0">
+    <input type="hidden" id="length" value="0">
 
     <div class="result">
-        <!-- select된 데이터 받아서 책 이미지 짜란 -->
         <p>결과 페이지 입니다!</p>
 
-    </div>
+    </div> -->
+
 </body>
 </html>

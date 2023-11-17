@@ -1,10 +1,83 @@
-.question{
+#question{
     display: none;
+    width: 640px;
+    height: auto;
+    margin: auto;
 }
 
-.result{
+.status {
+    height: 20px;
+    width: 90%;
+    background-color: rgb(230, 230, 230);
+    border-radius: 20px;
+    margin: auto;
+    position: relative;
+    top: 120px;
+  }
+  
+  .status_bar {
+    position: relative;
+    height: 100%;
+    border-radius: 20px;
+    background: #ff9494;
+  }
+.q_box {
+    background-color:  #f7c6c6;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    width: 600px;
+    height: 50px;
+    margin: auto;
+    margin-top: 200px;
+    color: white;
+    padding-top: 10px;
+  }
+  /* 답변 */
+  .answer_box{
+    width: 640px;
+    height: auto;
+    margin: auto;
+    text-align: center;
+  }
+  .answerList {
+    width: 250px;
+    height: 140px;
+    font-size: 22px;
+    border: 3px solid #efb6b6;
+    background-color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    box-sizing: border-box;
+    margin: 20px;
+    margin-top: 150px;
+  }
+  
+  .answerList:hover, .answerList:focus {
+    background-color: pink;
+    color: whitesmoke;
+  }
+  
+
+  #result{
     display: none;
-}
+    background-color: rgb(255, 245, 245);
+    text-align: center;
+    border-radius: 20px;
+    width: 90%;
+    height: 500px;
+    margin: auto;
+  }
+  
+  .result_name{
+    font-size: 26px;
+  }
+  
+  .result_desc{
+    font-size: 20px;
+  }
+
 fieldset{
     border: none;
     text-align: center;
@@ -54,13 +127,13 @@ h2{
     font-size: 30px;
     top: 100px;
 }
-.btn_wrap{
+/* .btn_wrap{
     text-align: center;
     margin: auto;
     padding-top:200px ;
     font-size: 30px;
-}
-.ans1{
+} */
+/* .ans1{
     width: 250px;
     height: 140px;
     font-size: 20px;
@@ -77,4 +150,4 @@ h2{
     background-color: white;
     cursor: pointer;
     box-sizing: border-box;
-}
+} */
