@@ -6,9 +6,9 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- push 하기 전 css link 수정하기! -->
-    <link rel="stylesheet" href="../../static/css/home.css">
-    <link rel="stylesheet" href="../../static/css/reset.css">
-    <link rel="stylesheet" href="../../static/css/report_view.css">
+    <link rel="stylesheet" href="../static/css/home.css">
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/report_view.css">
     <title>독후감</title>
 
 </head>
@@ -27,32 +27,32 @@
 
         <div class="title">
             <label for="title">제목</label>
-            <span th:text="${title}"></span>
+            <span th:text="${title}">dd</span>
         </div>
         <div class="author">
             <label for="author">작가</label>
-            <span th:text="${author}"></span></div>
+            <span th:text="${author}">dd</span></div>
         <div class="publisher">
             <label for="publisher">출판사</label>
-            <span th:text="${publisher}"></span>
+            <span th:text="${publisher}">dd</span>
         </div>
         <div class="reading_day">
             <label for="reading_day">독서 기간</label>
-            <span th:text="${start}"></span>
-            <span th:text="${end}"></span>
+            <span th:text="${start}">d</span> ~ 
+            <span th:text="${end}">d</span>
         </div>
         <div class="content">
             <label for="content">내용</label>
-            <span th:text="${content}"></span>
+            <span th:text="${content}">fewfwef</span>
         </div>
         <div class="impressive">
             <label for="content">인상깊은 구절</label>
-            <span th:text="${impressive}"></span>
+            <span th:text="${impressive}">나느나느나느</span>
         </div>
-        <p class="edit_button">
+        <div class="edit_button">
 <!--            <a th:href="book/update/${readingId}">수정하기</a>-->
             <a th:href="|../update/${readingId}|">수정하기</a>
-        </p>
+        </div>
     </fieldset>
 </form>
 
