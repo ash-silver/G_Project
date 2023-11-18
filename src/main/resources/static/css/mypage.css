@@ -11,9 +11,48 @@ legend{
     font-weight: bold;
 }
 .mem_top{
-    padding: 100px;
+    position: relative;
 }
 .t_label{
     padding: 30px;
     display: inline-block;
+}
+.mem_img{
+    padding: 9px;
+    padding-bottom: 30px;
+}
+.mem_top label{
+    display: none;
+
+}
+
+.pos {
+    position: relative;
+    top:-120px;
+    padding: 20px;
+}
+.mem_top button{
+    position: relative;
+    top:-120px;
+    left: 120px;
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+
+}
+.mem_bottom label{
+    width: 170px;
+    height: 50px;
+    color: #5a5959;
+}
+.mem_bottom strong{
+    padding: 20px;
+}
+.mem_bottom button{
+    position: relative;
+    left: 300px;
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+
 }
