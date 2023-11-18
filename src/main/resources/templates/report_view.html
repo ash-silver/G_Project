@@ -15,13 +15,12 @@
 <body>
     <div class="header">
         <ul class="bottom_menu flex-container">
-            <li class="home flex-item"><a href="./home.html">홈</a></li>
-            <li class="timer flex-item"><a href="./timer.html">타이머</a></li>
-            <li class="book flex-item"><a href="./report_list.html">독후감</a></li>
-            <li class="mypage flex-item"><a href="./mypage.html">마이페이지</a></li>
+            <li class="home flex-item"><a href="/home">홈</a></li>
+            <li class="timer flex-item"><a href="/timer">타이머</a></li>
+            <li class="book flex-item"><a href="/book/report_list">독후감</a></li>
+            <li class="mypage flex-item"><a href="/mypage">마이페이지</a></li>
         </ul>
     </div>
-<form class="report_view" th:method="get">
     <fieldset>
         <legend>기록하고 기억하는 <br> 독서 기록장</legend>
 
@@ -51,7 +50,7 @@
         </div>
         <div class="edit_button">
 <!--            <a th:href="book/update/${readingId}">수정하기</a>-->
-            <a th:href="|../update/${readingId}|">수정하기</a>
+            <a th:href="|/book/update/${readingId}|">수정하기</a>
         </div>
     </fieldset>
 </form>

@@ -1,19 +1,17 @@
 package com.example.g_project.entity;
 
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.DynamicUpdate;
 
 import java.time.LocalDateTime;
 
 @Entity
 @Getter
+@Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Table(name = "tb_reading")
+//@Builder
 public class Reading {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -70,7 +68,7 @@ public class Reading {
     }
 
 
-    public void ReadingUpdate(
+    public Reading ReadingUpdate(
             int memberCD
             , int bookCD
             , String readingAuthor
@@ -80,15 +78,19 @@ public class Reading {
             , String readingTitle
             , String readingContent
             , String readingImpressive) {
-        this.memberCD = memberCD;
-        this.bookCD = bookCD;
-        this.readingAuthor = readingAuthor;
-        this.readingPublisher = readingPublisher;
-        this.readingStart = readingStart;
-        this.readingEnd = readingEnd;
-        this.readingTitle = readingTitle;
-        this.readingContent = readingContent;
-        this.readingImpressive = readingImpressive;
+        Reading reading = new Reading();
+        reading.setMemberCD(memberCD);
+        reading.setReadingAuthor(readingAuthor);
+        reading.setBookCD(bookCD);
+        reading.setReadingPublisher(readingPublisher);
+        reading.setReadingStart(readingStart);
+        reading.setReadingEnd(readingEnd);
+        reading.setReadingTitle(readingTitle);
+        reading.setReadingContent(readingContent);
+        reading.setReadingImpressive(readingImpressive);
+
+        return reading;
     }
+
 
 }

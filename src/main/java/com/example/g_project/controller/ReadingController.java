@@ -57,7 +57,7 @@ public class ReadingController {
         return "report_edit";
     }
     @PutMapping("/update/{readingId}")
-    public String bookUpdate(@PathVariable int readingId, ReadingRequest request){
+    public String bookUpdate(@PathVariable int readingId, @RequestBody ReadingRequest request){
         readingService.editReading(readingId, request);
         return "redirect:/book/reading/" + readingId;
     }
@@ -69,5 +69,10 @@ public class ReadingController {
 //    public String findReading(Model model, @PageableDefault(page = 0, size = 9, sort = "ReadingCD", direction = Sort.Direction.DESC) Pageable pageable){
 //        model.addAttribute("pagingProducts", pagingProducts);
 //        return "productlist";
+//    }
+
+//    @DeleteMapping("/delete/{readingId}")
+//    public String bookDelete(@PathVariable int readingId, ReadingRequest request){
+//
 //    }
 }

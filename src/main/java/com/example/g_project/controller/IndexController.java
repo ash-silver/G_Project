@@ -14,4 +14,26 @@ public class IndexController {
     public String home(){
         return "home";
     }
+
+    @GetMapping("/timer")
+    public String timer(){
+        return "timer";
+    }
+    @GetMapping("/my-page")
+    public String mypage(){
+        return "mypage";
+    }
+    @GetMapping("/bookRec")
+    public String bookRec(){
+        return "book_rec";
+    }
+    @GetMapping("/findId")
+    public String findId(){
+        return "find_id";
+    }
+    @GetMapping("/findPw")
+    public String findPw(){
+        return "find_pwd";
+    }
+
 }
