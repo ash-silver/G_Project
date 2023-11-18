@@ -25,6 +25,7 @@
         <div class="timer_wrap">
             <p class="time">00:00:00</p>
             <div class="btn">
+                <input class="reset_btn" type="button" value="reset">
                 <input class="start_btn" type="button" value="start">
                 <input class="stop_btn j_hide" type="button" value="stop">
             </div>
@@ -37,8 +38,19 @@
         const timer = document.querySelector('.time'),
         startBtn=document.querySelector('.start_btn'),
         stopBtn=document.querySelector('.stop_btn');
+        resetBtn=document.querySelector('.reset_btn');
         let TIME =0;
         let cron;
+        function resetButton(){
+            timer.innerHTML="00:00:00"
+            localStorage.getItem('timer')==0;
+            return (TIME=0);
+            // updateTimer();
+            // // stopButton();
+            // cron = setInterval(updateTimer,1000);
+            // startBtn.classList.add('j_hide');
+            // stopBtn.classList.remove('j_hide');
+        }
         function startButton(){
             
             updateTimer();
@@ -93,6 +105,7 @@
             }
         startBtn.addEventListener('click', startButton);
         stopBtn.addEventListener('click', stopButton);
+        resetBtn.addEventListener('click', resetButton);
     </script>
 </body>
 </html>
