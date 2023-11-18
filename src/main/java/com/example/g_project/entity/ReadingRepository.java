@@ -7,5 +7,9 @@ import java.util.Optional;
 
 public interface ReadingRepository extends JpaRepository<Reading, Integer> {
     Reading findById(int readingCD);
-//    ReadingResponse findByReadingCD(int readingCD);
+
+    //    ReadingResponse findByReadingCD(int readingCD);
+    static Reading deleteById(int readingCD) {
+        return null;
+    }
 }
