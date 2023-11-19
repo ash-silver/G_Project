@@ -30,8 +30,8 @@ public class ReadingService {
     public void editReading(int readingId, ReadingRequest request) {
         Reading entity = readingRepository.findById(readingId);
         entity.ReadingUpdate(
-                request.getMemberCD()
-                , request.getBookCD()
+//                request.getMemberNickname()
+                 request.getBookCD()
                 , request.getReadingAuthor()
                 , request.getReadingPublisher()
                 , request.getReadingStart()
@@ -45,14 +45,14 @@ public class ReadingService {
         readingRepository.deleteById(readingId);
     }
 
-    @Transactional
-    public List<ReadingResponse> getReadingList(){
-        List<Reading> board = readingRepository.findAll();
-        List<Reading> boardList = new ArrayList<>();
-
-        for(Reading reading : board){
-            ReadingResponse readingResponse = Reading.builder()
-                    .readingCD()
-        }
-    }
+//    @Transactional
+//    public List<ReadingResponse> getReadingList(){
+//        List<Reading> board = readingRepository.findAll();
+//        List<Reading> boardList = new ArrayList<>();
+//
+//        for(Reading reading : board){
+//            ReadingResponse readingResponse = Reading.builder()
+//                    .readingCD()
+//        }
+//    }
 }

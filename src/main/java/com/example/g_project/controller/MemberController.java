@@ -31,11 +31,12 @@ public class MemberController {
         if(findMember != null){
             session.setAttribute("member_email", findMember.getMember_email());
             session.setAttribute("member_CD", findMember.getMember_CD());
+            session.setAttribute("member_nickname", findMember.getMember_nickname());
             member_CD=findMember.getMember_CD();
             return "redirect:/home";
         }
         else{
-            return "login";
+            return "redirect:/login";
         }
     }
 

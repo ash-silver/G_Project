@@ -29,6 +29,8 @@
         <fieldset>
             <legend>기록하고 기억하는 <br> 독서 기록장</legend>
 
+            <input type="hidden" name="memberNickname" id="memberNickname" th:value="${session.member_nickname}">
+
             <div class="title">
                 <label for="title">제목</label>
                 <input type="text" name="readingTitle" id="title">

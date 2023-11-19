@@ -10,7 +10,7 @@ import org.hibernate.annotations.DynamicUpdate;
 @DynamicUpdate
 public class ReadingResponse {
     private int readingCD;
-    private int memberCD;
+    private String memberNickname;
     private int bookCD;
     private String readingAuthor;
     private String readingPublisher;
@@ -22,7 +22,7 @@ public class ReadingResponse {
 
     public ReadingResponse(Reading entity){
         this.readingCD = entity.getReadingCD();
-        this.memberCD = entity.getMemberCD();
+        this.memberNickname = entity.getMemberNickname();
         this.bookCD = entity.getBookCD();
         this.readingAuthor = entity.getReadingAuthor();
         this.readingPublisher = entity.getReadingPublisher();
@@ -36,8 +36,8 @@ public class ReadingResponse {
     public void setReadingCD(int readingCD){
         this.readingCD = readingCD;
     }
-    public void setMemberCD(int memberCD){
-        this.memberCD = memberCD;
+    public void setMemberNickname(String memberNickname){
+        this.memberNickname = memberNickname;
     }
     public void setBookCD(int bookCD){
         this.bookCD = bookCD;

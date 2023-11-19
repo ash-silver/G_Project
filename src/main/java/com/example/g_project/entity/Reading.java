@@ -1,5 +1,6 @@
 package com.example.g_project.entity;
 
+import com.example.g_project.dto.ReadingResponse;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -17,8 +18,8 @@ public class Reading {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "readingCD")
     private int readingCD;
-    @Column(name = "memberCD")
-    private int memberCD;
+    @Column(name = "memberNickname")
+    private String memberNickname;
 
     @Column(name = "bookCD")
     private int bookCD;
@@ -44,7 +45,7 @@ public class Reading {
 
     @Builder
     public Reading(int readingCD
-            , int memberCD
+            , String memberNickname
             , int bookCD
             , String readingAuthor
             , String readingPublisher
@@ -55,7 +56,7 @@ public class Reading {
             , String readingImpressive
             , LocalDateTime readingRegister) {
         this.readingCD = readingCD;
-        this.memberCD = memberCD;
+        this.memberNickname = memberNickname;
         this.bookCD = bookCD;
         this.readingAuthor = readingAuthor;
         this.readingPublisher = readingPublisher;
@@ -69,8 +70,7 @@ public class Reading {
 
 
     public void ReadingUpdate(
-            int memberCD
-            , int bookCD
+             int bookCD
             , String readingAuthor
             , String readingPublisher
             , String readingStart
@@ -78,7 +78,6 @@ public class Reading {
             , String readingTitle
             , String readingContent
             , String readingImpressive) {
-        this.memberCD =  memberCD;
         this.bookCD =  bookCD;
         this.readingAuthor =  readingAuthor;
         this.readingPublisher =  readingPublisher;

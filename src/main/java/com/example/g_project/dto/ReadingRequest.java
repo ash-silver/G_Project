@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 public class ReadingRequest {
 
     private int readingCD;
-    private int memberCD;
+    private String memberNickname;
     private int bookCD;
     private String readingAuthor;
     private String readingPublisher;
@@ -24,7 +24,7 @@ public class ReadingRequest {
     public Reading readingEntity(){
         return Reading.builder()
                 .readingCD(readingCD)
-                .memberCD(memberCD)
+                .memberNickname(memberNickname)
                 .bookCD(bookCD)
                 .readingAuthor(readingAuthor)
                 .readingPublisher(readingPublisher)

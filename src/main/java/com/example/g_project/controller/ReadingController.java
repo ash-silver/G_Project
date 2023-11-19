@@ -2,12 +2,9 @@ package com.example.g_project.controller;
 
 import com.example.g_project.dto.ReadingRequest;
 import com.example.g_project.dto.ReadingResponse;
-import com.example.g_project.entity.Reading;
 import com.example.g_project.service.ReadingService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.web.PageableDefault;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -27,7 +24,8 @@ public class ReadingController {
         return "report_write";
     }
     @PostMapping("/write")
-    public String bookWrite(ReadingRequest request){
+    public String bookWrite(ReadingRequest request, HttpSession session){
+//        String memberNickname = (String)session.getAttribute("memberNickname");
         readingService.createReading(request);
         return "home";
     }
@@ -75,12 +73,12 @@ public class ReadingController {
         return "book_rec";
     }
 
-    @GetMapping("/list")
-    public String list(Model model){
-        List<ReadingResponse> readingResponseList = readingService.getReadingList();
-        model.addAttribute("readingList", readingResponseList);
-        return "report_list";
-    }
+//    @GetMapping("/list")
+//    public String list(Model model){
+//        List<ReadingResponse> readingResponseList = readingService.getReadingList();
+//        model.addAttribute("readingList", readingResponseList);
+//        return "report_list";
+//    }
 
 
 }
