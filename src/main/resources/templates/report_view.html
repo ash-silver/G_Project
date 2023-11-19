@@ -6,9 +6,9 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- push 하기 전 css link 수정하기! -->
-    <link rel="stylesheet" href="../../static/css/home.css">
-    <link rel="stylesheet" href="../../static/css/reset.css">
-    <link rel="stylesheet" href="../../static/css/report_view.css">
+    <link rel="stylesheet" href="../static/css/home.css">
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/report_view.css">
     <title>독후감</title>
 
 </head>
@@ -50,8 +50,8 @@
         </div>
         <div class="edit_button">
 <!--            <a th:href="book/update/${readingId}">수정하기</a>-->
-            <a th:href="|/book/update/${readingId}|">수정하기</a>
-            <a th:href="|/book/delete/${readingId}|">삭제하기</a>
+            <a class="update_btn" th:href="|/book/update/${readingId}|">수정하기</a>
+            <a class="delete_btn" th:href="|/book/delete/${readingId}|">삭제하기</a>
         </div>
     </fieldset>
 </form>

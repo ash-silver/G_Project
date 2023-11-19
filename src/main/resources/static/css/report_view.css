@@ -51,7 +51,7 @@ span{
     text-align: center;
     
 }
-.edit_button a{
+.update_btn{
     width: 120px;
     height: 50px;
     font-size: 20px;
@@ -59,4 +59,15 @@ span{
     background-color: rgb(255, 246, 234);
     border:  none;
     border-radius: 10px;
+    margin:10px;
+}
+.delete_btn{
+    width: 120px;
+    height: 50px;
+    font-size: 20px;
+    padding: 10px;
+    background-color: rgb(255, 231, 227);
+    border:  none;
+    border-radius: 10px;
+    margin:10px;
 }

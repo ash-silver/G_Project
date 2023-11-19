@@ -32,27 +32,49 @@
 
         <span class="write"><a  href="/write">글쓰기</a></span>
 
-<!--        <ul class="list">-->
-<!--            <li class=""><a href="./report_view.html">책 제목</a></li>-->
-<!--            <li class=""><a href="./report_view.html">책2</a></li>-->
-<!--            <li class=""><a href="./report_view.html">책3</a></li>-->
-<!--            <li class=""><a href="./report_view.html">책4</a></li>-->
-<!--            &lt;!&ndash; <li class=""><a href="./report_view.html">책5</a></li>-->
-<!--            <li class=""><a href="./report_view.html">책6</a></li>-->
-<!--            <li class=""><a href="./report_view.html">책7</a></li>-->
-<!--            <li class=""><a href="./report_view.html">책8</a></li>-->
-<!--            <li class=""><a href="./report_view.html">책9</a></li> &ndash;&gt;-->
+       <ul class="list">
 
-<!--        </ul>-->
-       <tr th:each="board : ${tbReading}">
+        <li class=""><a href="./report_view.html">
+            <div class="b_wrap">
+                <span class="b_title">불편한 편의점</span>
+                <span class="b_date">2023.11.19</span>
+            </div>
+        </a></li>
+        <li class=""><a href="./report_view.html">
+            <div class="b_wrap">
+                <span class="b_title">불편한 편의점</span>
+                <span class="b_date">2023.11.19</span>
+            </div>
+        </a></li>
+        <li class=""><a href="./report_view.html">
+            <div class="b_wrap">
+                <span class="b_title">불편한 편의점</span>
+                <span class="b_date">2023.11.19</span>
+            </div>
+        </a></li>
+        <li class=""><a href="./report_view.html">
+            <div class="b_wrap">
+                <span class="b_title">불편한 편의점</span>
+                <span class="b_date">2023.11.19</span>
+            </div>
+        </a></li>
+
+
+        
+            
+ 
+
+       </ul>
+
+       <!-- <tr class="list" th:each="board : ${tbReading}">
         <td>
-            <span th:text="${board.id}">
+            <span class="aa" th:text="${board.id}">
                 <a th:href="@{'/post/' + ${board.id}">
                     <span th:text="${board.title}"></span>
                 </a>
             </span>
         </td>
-       </tr>
+       </tr> -->
 
     </main>
     

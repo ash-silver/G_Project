@@ -15,7 +15,8 @@ header{
     position: relative;
     width: auto;
     height: 180px;
-    background-color: rgb(243, 230, 238);
+    /* background-color: rgb(243, 230, 238); */
+    background-color: rgb(243, 228, 228);
     border-radius: 0 0 50px 0;
     padding-left:20px ;
 }
@@ -34,21 +35,43 @@ header{
 .list{
     width: 640px;
     height: auto;
+    display: block;
     display: flex;
     flex-wrap: wrap;
+    /* justify-content: flex-start; */
+
 }
 .list li{
     width: 164px;
     height: 220px;
-    background-color: rgb(223, 232, 240);
-    margin: auto;
+    /* background-color: rgb(68, 139, 99); */
+    background-color: rgb(222, 151, 191);
     margin-bottom: 30px;
+    margin: 24px;
     /* justify-content: space-around; */
-    justify-content:flex-start;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 2px 2px 2px 2px gray;
+    box-sizing: border-box;
 }
 .list li a{
     width: 164px;
     height: 220px;
     display: block;
+    
 }
-
+.b_wrap{
+    width: auto;
+    height: 50px;
+    font-size: 18px;
+    text-align: center;
+}
+.b_title{
+    margin-top: 60px;
+    display: block;
+    background-color: rgb(251, 249, 243);
+    padding: 10px;
+    box-sizing: border-box;
+}
+.b_date{
+    font-size: 15px;
+}
