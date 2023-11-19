@@ -57,7 +57,7 @@ public class ReadingController {
         return "report_edit";
     }
     @PutMapping("/update/{readingId}")
-    public String bookUpdate(@PathVariable int readingId, ReadingRequest request){
+    public String bookUpdate(@PathVariable int readingId, @RequestBody ReadingRequest request){
         readingService.editReading(readingId, request);
         return "redirect:/book/reading/" + readingId;
     }

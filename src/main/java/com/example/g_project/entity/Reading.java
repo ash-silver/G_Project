@@ -68,7 +68,7 @@ public class Reading {
     }
 
 
-    public void ReadingUpdate(
+    public Reading ReadingUpdate(
             int memberCD
             , int bookCD
             , String readingAuthor
@@ -78,6 +78,7 @@ public class Reading {
             , String readingTitle
             , String readingContent
             , String readingImpressive) {
+<<<<<<< HEAD
         this.memberCD =  memberCD;
         this.bookCD =  bookCD;
         this.readingAuthor =  readingAuthor;
@@ -88,4 +89,21 @@ public class Reading {
         this.readingContent =  readingContent;
         this.readingImpressive =  readingImpressive;
     }
+=======
+        Reading reading = new Reading();
+        reading.setMemberCD(memberCD);
+        reading.setReadingAuthor(readingAuthor);
+        reading.setBookCD(bookCD);
+        reading.setReadingPublisher(readingPublisher);
+        reading.setReadingStart(readingStart);
+        reading.setReadingEnd(readingEnd);
+        reading.setReadingTitle(readingTitle);
+        reading.setReadingContent(readingContent);
+        reading.setReadingImpressive(readingImpressive);
+
+        return reading;
+    }
+
+
+>>>>>>> 15336ee1cac92de304868068a04e2a9edb4d652e
 }
