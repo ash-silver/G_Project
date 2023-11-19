@@ -9,6 +9,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 public class ReadingService {
@@ -38,9 +41,18 @@ public class ReadingService {
                 , request.getReadingImpressive()
         );
     }
-
-//    @Transactional
     public void deleteReading(int readingId){
         readingRepository.deleteById(readingId);
+    }
+
+    @Transactional
+    public List<ReadingResponse> getReadingList(){
+        List<Reading> board = readingRepository.findAll();
+        List<Reading> boardList = new ArrayList<>();
+
+        for(Reading reading : board){
+            ReadingResponse readingResponse = Reading.builder()
+                    .readingCD()
+        }
     }
 }

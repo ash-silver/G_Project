@@ -12,6 +12,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/book")
 @RequiredArgsConstructor
@@ -65,21 +67,20 @@ public class ReadingController {
     @GetMapping("/delete/{readingId}")
     public String bookDelete(@PathVariable int readingId){
         readingService.deleteReading(readingId);
-        return "home";
+        return "redirect:/home";
     }
 
     @GetMapping("/recommand")
     public String bookRecommand(){
         return "book_rec";
     }
-//    @GetMapping("/list")
-//    public String findReading(Model model, @PageableDefault(page = 0, size = 9, sort = "ReadingCD", direction = Sort.Direction.DESC) Pageable pageable){
-//        model.addAttribute("pagingProducts", pagingProducts);
-//        return "productlist";
-//    }
 
-//    @DeleteMapping("/delete/{readingId}")
-//    public String bookDelete(@PathVariable int readingId, ReadingRequest request){
-//
-//    }
+    @GetMapping("/list")
+    public String list(Model model){
+        List<ReadingResponse> readingResponseList = readingService.getReadingList();
+        model.addAttribute("readingList", readingResponseList);
+        return "report_list";
+    }
+
+
 }
