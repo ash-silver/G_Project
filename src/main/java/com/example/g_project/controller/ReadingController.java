@@ -61,6 +61,13 @@ public class ReadingController {
         readingService.editReading(readingId, request);
         return "redirect:/book/reading/" + readingId;
     }
+
+    @GetMapping("/delete/{readingId}")
+    public String bookDelete(@PathVariable int readingId){
+        readingService.deleteReading(readingId);
+        return "home";
+    }
+
     @GetMapping("/recommand")
     public String bookRecommand(){
         return "book_rec";

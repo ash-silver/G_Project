@@ -6,6 +6,7 @@ import com.example.g_project.entity.Reading;
 import com.example.g_project.entity.ReadingRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -17,10 +18,6 @@ public class ReadingService {
     public void createReading(ReadingRequest request){
         readingRepository.save(request.readingEntity());
     }
-
-//    public ReadingResponse findReading(int readingId){
-//        return new ReadingResponse(readingRepository.findByReadingCD(readingId));
-//    }
 
     public ReadingResponse findById(int readingId){
         return new ReadingResponse(readingRepository.findById(readingId));
@@ -42,7 +39,8 @@ public class ReadingService {
         );
     }
 
-//    public void deleteById(int readingId){
-//        ReadingRepository.deleteById(readingId);
-//    }
+//    @Transactional
+    public void deleteReading(int readingId){
+        readingRepository.deleteById(readingId);
+    }
 }
