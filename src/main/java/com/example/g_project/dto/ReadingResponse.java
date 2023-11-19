@@ -52,19 +52,4 @@ public class ReadingResponse {
         this.readingStart = readingStart;
     }
 
-
-//    public void setEntity(Reading entity){
-//
-//        this.readingCD = entity.getReadingCD();
-//        this.memberCD = entity.getMemberCD();
-//        this.bookCD = entity.getBookCD();
-//        this.readingAuthor = entity.getReadingAuthor();
-//        this.readingPublisher = entity.getReadingPublisher();
-//        this.readingStart = entity.getReadingStart();
-//        this.readingEnd = entity.getReadingEnd();
-//        this.readingTitle = entity.getReadingTitle();
-//        this.readingContent = entity.getReadingContent();
-//        this.readingImpressive = entity.getReadingImpressive();
-//    }
-
 }
