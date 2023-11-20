@@ -5,27 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/home.css">
+    <link rel="stylesheet" href="../static/css/find_id.css">
     <title>아이디 찾기</title>
 </head>
 <body>  
+    <div class="header">
+        <ul class="bottom_menu flex-container">
+            <li class="home flex-item"><a href="/home">홈</a></li>
+            <li class="timer flex-item"><a href="/timer">타이머</a></li>
+            <li class="book flex-item"><a href="/book/report_list">독후감</a></li>
+            <li class="mypage flex-item"><a href="/mypage">마이페이지</a></li>
+        </ul>
+    </div>
     <form name="id_search_form" action="" method="">
         <fieldset>
-            <legend>당신의 아이디를 알려드립니다!</legend>
-            <div class="member_nickname">
+            <legend class="top">당신의 아이디를 알려드립니다!</legend>
+            <div class="member_nickname line">
                 <label for="member_nickname">닉넴</label>
-                <input type="text" name="member_nickname" id="member_nickname" placeholder="이름">
+                <input type="text" name="member_nickname" id="member_nickname" placeholder="닉네임">
             </div>
-            <div class="usr_email">
-                <label for="usr_email">이메일</label>
-                <input type="text" name="usr_email" id="usr_email" placeholder="이름">
+            <div class="member_password line">
+                <label for="member_password">비밀번호</label>
+                <input type="text" name="member_password" id="member_password" placeholder="비밀번호">
             </div>
             <div class="confirm">
                 <button type="submit">아이디 확인하기</button>
             </div>
-            <div class="pwd_sr">
+            <!-- <div class="pwd_sr">
                 <a href="/findPw">비밀번호 찾기</a>
-            </div>
-            <button type="button" onclick="history.back()">돌아가기</button>
+            </div> -->
+            <!-- <button type="button" onclick="history.back()">돌아가기</button> -->
 
 
         </fieldset> 
