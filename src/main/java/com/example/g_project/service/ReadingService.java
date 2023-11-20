@@ -8,6 +8,9 @@ import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 @Service
 @RequiredArgsConstructor
@@ -42,14 +45,9 @@ public class ReadingService {
         readingRepository.deleteById(readingId);
     }
 
-//    @Transactional
-//    public List<ReadingResponse> getReadingList(){
-//        List<Reading> board = readingRepository.findAll();
-//        List<Reading> boardList = new ArrayList<>();
-//
-//        for(Reading reading : board){
-//            ReadingResponse readingResponse = Reading.builder()
-//                    .readingCD()
-//        }
-//    }
+    @Transactional
+    public List<Reading> readingList(){
+//        List<ReadingResponse> readingList = readingRepository.findAll();
+        return readingRepository.findAll();
+    }
 }

@@ -2,6 +2,7 @@ package com.example.g_project.controller;
 
 import com.example.g_project.dto.ReadingRequest;
 import com.example.g_project.dto.ReadingResponse;
+import com.example.g_project.entity.Reading;
 import com.example.g_project.service.ReadingService;
 import lombok.RequiredArgsConstructor;
 import jakarta.servlet.http.HttpSession;
@@ -73,12 +74,10 @@ public class ReadingController {
         return "book_rec";
     }
 
-//    @GetMapping("/list")
-//    public String list(Model model){
-//        List<ReadingResponse> readingResponseList = readingService.getReadingList();
-//        model.addAttribute("readingList", readingResponseList);
-//        return "report_list";
-//    }
-
+    @GetMapping("/list")
+    public String list(Model model){
+        model.addAttribute("readingList", readingService.readingList());
+        return "report_list";
+    }
 
 }

@@ -32,6 +32,7 @@ public class MemberController {
             session.setAttribute("member_email", findMember.getMember_email());
             session.setAttribute("member_CD", findMember.getMember_CD());
             session.setAttribute("member_nickname", findMember.getMember_nickname());
+            session.setAttribute("member_password", findMember.getMember_password());
             member_CD=findMember.getMember_CD();
             return "redirect:/home";
         }

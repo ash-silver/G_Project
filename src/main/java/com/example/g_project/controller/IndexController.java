@@ -19,14 +19,14 @@ public class IndexController {
     public String timer(){
         return "timer";
     }
-    @GetMapping("/my-page")
+    @GetMapping("/mypage")
     public String mypage(){
         return "mypage";
     }
-    @GetMapping("/bookRec")
-    public String bookRec(){
-        return "book_rec";
-    }
+//    @GetMapping("/bookRec")
+//    public String bookRec(){
+//        return "book_rec";
+//    }
     @GetMapping("/findId")
     public String findId(){
         return "find_id";

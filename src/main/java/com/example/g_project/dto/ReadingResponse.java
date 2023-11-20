@@ -33,6 +33,13 @@ public class ReadingResponse {
         this.readingImpressive = entity.getReadingImpressive();
     }
 
+    public void ReadingList(Reading entity){
+        this.readingCD = entity.getReadingCD();
+        this.readingTitle = entity.getReadingTitle();
+        this.readingImpressive = entity.getReadingImpressive();
+        this.readingStart = entity.getReadingStart();
+
+    }
     public void setReadingCD(int readingCD){
         this.readingCD = readingCD;
     }

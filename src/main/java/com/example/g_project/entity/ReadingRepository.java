@@ -9,4 +9,8 @@ public interface ReadingRepository extends JpaRepository<Reading, Integer> {
     Reading findById(int readingCD);
 
     void deleteById(Integer readingCD);
+
+
+
+//    @Query("SELECT * FROM ")
 }
