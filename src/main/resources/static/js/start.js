@@ -68,7 +68,7 @@ function setResult(){
 //i 에 맞는 이미지 삽입
   var img = document.createElement('img');
   const imgDiv = document.querySelector('#result_img');
-  var url = '../images/rec-' + point + '.png';
+  var url = '../static/images/rec-' + point + '.png';
   img.src = url;
   img.alt = point;
   img.classList.add('img-fluid');
