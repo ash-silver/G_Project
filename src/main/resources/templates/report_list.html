@@ -33,25 +33,16 @@
 
     <ul class="list">
 
-        <li class=""><a href="/report_view/{readingId}">
+        <li th:each ="board : ${readingList}" class=""><a href="|/book/reading/${board.readingCD}|">
             <div class="b_wrap">
-<!--                <span class="b_title">불편한 편의점</span>-->
-<!--                <span class="b_date">2023.11.19</span>-->
-
-                <tr th:each ="board : ${readingList}">
+               <span th:text="${board.readingTitle}" class="b_title">불편한 편의점</span>
+               <span th:text="${board.readingRegister}" class="b_date">2023.11.19</span>
 <!--                    <td th:text="${board.readingAuthor}"/>-->
 <!--                    <td th:text="${board.readingContent}"/>-->
-                    <a th:href="|/book/update/${board.readingCD}|">내 독서록 보기</a>
 <!--                    <a href="/report_view/"+${board.readingCD}+></a>-->
-                    <td th:text="${board.readingTitle}"/>
-                    <td th:text="${board.readingImpressive}"/>
-                    <td th:text="${board.readingRegister}"/>
-
-                </tr>
-                <script>
-
-                </script>
-
+                    <!-- <td th:text="${board.readingTitle}"/> -->
+                    <!-- <td th:text="${board.readingImpressive}"/> -->
+                    <!-- <td th:text="${board.readingRegister}"/> -->
             </div>
         </a></li>
         <!--        <li class=""><a href="./report_view.html">-->
@@ -71,7 +62,7 @@
         <!--                <span class="b_title">불편한 편의점</span>-->
         <!--                <span class="b_date">2023.11.19</span>-->
         <!--            </div>-->
-        </a></li>
+        <!-- </a></li> -->
 
 
     </ul>
