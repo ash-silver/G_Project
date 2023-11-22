@@ -33,7 +33,7 @@
 
     <ul class="list">
 
-        <li th:each ="board : ${readingList}" class=""><a href="|/book/reading/${board.readingCD}|">
+        <li th:each ="board : ${readingList}" class=""><a th:href="|/book/reading/${board.readingCD}|">
             <div class="b_wrap">
                <span th:text="${board.readingTitle}" class="b_title">불편한 편의점</span>
                <span th:text="${board.readingRegister}" class="b_date">2023.11.19</span>
