@@ -26,19 +26,19 @@
       <img class="mem_img " src="../static/images/mmmm.png" alt="">
       <label  >닉넴 : </label>
       <span class="pos" th:text="${session.member_nickname}">홍길동</span>
-      <button>로그아웃</button>
+      <button onclick="location.href='/home'">로그아웃</button>
     </div>
 
     <div class="mem_bottom">
       <strong>회원정보</strong>
-      <button>회원정보 수정</button>
+      <button onclick="location.href='/'">회원정보 수정</button>
       <div class="member_nickname">
         <label class="t_label" >닉넴</label>
         <span th:text="${session.member_nickname}">홍길동</span>
       </div>
 
       <div class="member_email">
-<!--        <label class="t_label" for="member_email"class="u_title">이메일/아이디</label>-->
+       <label class="t_label" for="member_email"class="u_title">이메일/아이디</label>
         <span th:text="${session.member_email}">hong@gmail.com</span>
       </div>
 
