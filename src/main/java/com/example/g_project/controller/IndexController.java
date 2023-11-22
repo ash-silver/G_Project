@@ -21,12 +21,9 @@ public class IndexController {
     }
     @GetMapping("/mypage")
     public String mypage(){
-        return "mypage";
+        return "mymy";
     }
-//    @GetMapping("/bookRec")
-//    public String bookRec(){
-//        return "book_rec";
-//    }
+
     @GetMapping("/findId")
     public String findId(){
         return "find_id";
