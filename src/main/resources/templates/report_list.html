@@ -29,17 +29,29 @@
         <h1>book_list</h1>
         <p>오늘은 무슨 책을 읽으셨나요?</p>
     </div>
-
     <span class="write"><a href="write">글쓰기</a></span>
 
     <ul class="list">
 
         <li class=""><a href="/report_view/{readingId}">
             <div class="b_wrap">
-                <span class="b_title">불편한 편의점</span>
-                <span class="b_date">2023.11.19</span>
-                <span th:text="${title}">dd</span>
-                <span th:text="${author}">dd</span>
+<!--                <span class="b_title">불편한 편의점</span>-->
+<!--                <span class="b_date">2023.11.19</span>-->
+
+                <tr th:each ="board : ${readingList}">
+<!--                    <td th:text="${board.readingAuthor}"/>-->
+<!--                    <td th:text="${board.readingContent}"/>-->
+                    <a th:href="|/book/update/${board.readingCD}|">내 독서록 보기</a>
+<!--                    <a href="/report_view/"+${board.readingCD}+></a>-->
+                    <td th:text="${board.readingTitle}"/>
+                    <td th:text="${board.readingImpressive}"/>
+                    <td th:text="${board.readingRegister}"/>
+
+                </tr>
+                <script>
+
+                </script>
+
             </div>
         </a></li>
         <!--        <li class=""><a href="./report_view.html">-->

@@ -6,9 +6,9 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- push 하기 전 css link 수정하기! -->
-    <link rel="stylesheet" href="../static/css/home.css">
-    <link rel="stylesheet" href="../static/css/reset.css">
-    <link rel="stylesheet" href="../static/css/report_view.css">
+    <link rel="stylesheet" href="../../static/css/home.css">
+    <link rel="stylesheet" href="../../static/css/reset.css">
+    <link rel="stylesheet" href="../../static/css/report_view.css">
     <title>독후감</title>
 
 </head>
@@ -17,7 +17,7 @@
         <ul class="bottom_menu flex-container">
             <li class="home flex-item"><a href="/home">홈</a></li>
             <li class="timer flex-item"><a href="/timer">타이머</a></li>
-            <li class="book flex-item"><a href="/book/report_list">독후감</a></li>
+            <li class="book flex-item"><a href="/book/list">독후감</a></li>
             <li class="mypage flex-item"><a href="/mypage">마이페이지</a></li>
         </ul>
     </div>
@@ -41,14 +41,14 @@
             <span th:text="${end}">d</span>
         </div>
         <div class="content">
-            <label for="content">내용</label>
+<!--            <label for="content">내용</label>-->
             <span th:text="${content}">fewfwef</span>
         </div>
         <div class="impressive">
             <label for="content">인상깊은 구절</label>
             <span th:text="${impressive}">나느나느나느</span>
         </div>
-        <div class="edit_button">S
+        <div class="edit_button">
             <a class="update_btn" th:href="|/book/update/${readingId}|">수정하기</a>
             <a class="delete_btn" th:href="|/book/delete/${readingId}|">삭제하기</a>
         </div>
