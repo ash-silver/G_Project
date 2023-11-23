@@ -63,6 +63,7 @@ function goResult(){
 }
 function setResult(){
   let point = cal();
+  //name
   const resultName = document.querySelector('.result_name');
   resultName.innerHTML = infoList[point].name;
 //i 에 맞는 이미지 삽입
@@ -73,12 +74,12 @@ function setResult(){
   img.alt = point;
   img.classList.add('img-fluid');
   imgDiv.appendChild(img);
-
+//desc
   const resultDesc = document.querySelector('.result_desc');
   resultDesc.innerHTML = infoList[point].desc;
 }
 function cal(){
-  console.log(select);
+  // console.log(select); //리스트 확인용
   var result = select.indexOf(Math.max(...select));
   return result;
 }

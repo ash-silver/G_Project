@@ -1,11 +1,21 @@
 .timer_wrap{
     width: 500px;
-    height: 700px;
     margin: auto;
     position: relative;
-    background: url(../images/ttt.png)no-repeat;
-    background-position: 14px;
+    /* background: url(../images/ttt.png)no-repeat; */
+    /* background-position: 14px; */
     text-align: center;
+    
+}
+.img_ani{
+    animation: motion 1.2s
+    linear 0s  
+    infinite alternate; 
+}
+@keyframes motion {
+    0% {transform: rotate(0);} 
+    50% {transform: rotate(-5deg);;} 
+    100% {transform: rotate(5deg);;} 
 }
 legend{
     padding-top: 20px;
@@ -13,7 +23,9 @@ legend{
     text-align: center;
 }
 .time{
-    padding: 300px 0 280px 0;
+    position: relative;
+    top: 280px;
+    /* padding: 100px 0 280px 0; */
     font-size: 50px;
     text-align: center;
 }
@@ -22,17 +34,10 @@ legend{
     height: auto;
     margin: auto;
     text-align: center;
+    margin-top: 50px;
     
 }
-.btn input{
-    /* width: 180px;
-    height: 80px;
-    border-radius: 50px;
-    
-    border: none;
-    font-size: 20px;
-    cursor: pointer; */
-}
+
 .reset_btn{
     width: 80px;
     height: 80px;
@@ -44,6 +49,8 @@ legend{
     position: relative;
 }
 .start_btn{
+    position: relative;
+    left: 35px;
     width: 180px;
     height: 80px;
     border-radius: 50px;
@@ -57,7 +64,8 @@ legend{
     width: 180px;
     height: 80px;
     border-radius: 50px;
-    
+    position: relative;
+    left: 35px;
     border: none;
     font-size: 20px;
     cursor: pointer;

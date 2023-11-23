@@ -24,6 +24,8 @@
         <legend>오늘의 독서 시간</legend>
         <div class="timer_wrap">
             <p class="time">00:00:00</p>
+            <img src="../static/images/ttt.png" alt="">
+
             <div class="btn">
                 <input class="reset_btn" type="button" value="reset">
                 <input class="start_btn" type="button" value="start">
@@ -45,14 +47,10 @@
             timer.innerHTML="00:00:00"
             localStorage.getItem('timer')==0;
             return (TIME=0);
-            // updateTimer();
-            // // stopButton();
-            // cron = setInterval(updateTimer,1000);
-            // startBtn.classList.add('j_hide');
-            // stopBtn.classList.remove('j_hide');
         }
         function startButton(){
-            
+            var imgAni = document.querySelector('img');
+            imgAni.classList.add('img_ani');
             updateTimer();
             // stopButton();
             cron = setInterval(updateTimer,1000);
@@ -60,6 +58,8 @@
             stopBtn.classList.remove('j_hide');
         }
         function stopButton(){
+            var imgAni = document.querySelector('img');
+            imgAni.classList.remove('img_ani');
             clearInterval(cron);
             startBtn.classList.remove('j_hide');
             stopBtn.classList.add('j_hide');
@@ -69,7 +69,7 @@
             const checkMin = Math.floor(TIME/60);
             const sec = TIME % 60;
             const min = checkMin %60;
-// 자바스크립트 시간 표시 방법
+            // 자바스크립트 시간 표시 방법
             timer.innerText = `${hour < 10 ? `0${hour}` : hour}:${
                 min < 10 ? `0${min}` : min}:${
                 sec < 10 ? `0${sec}` : sec}`;
@@ -79,7 +79,7 @@
             localStorage.setItem('TIME', TIME);
             console.log(localStorage.getItem('TIME'));  
 
-            }
+        }
         $(document).ready(function(){
                 // 현재 브라우저에서 WebStorage를 지원할 때
                 if (('localStorage' in window) && window['localStorage'] !== null) {
@@ -91,18 +91,18 @@
                     }
                 }
         });
-            window.onpageshow = function (event) {
-            // 새로고침: window.performance.navigation.type == 1
-            // 뒤로가기: window.performance.navigation.type == 2
-                if (event.persisted || (window.performance && (window.performance.navigation.type == 1 || window.onload))) {
-                    if (('localStorage' in window) && window['localStorage'] !== null) {
-                        if (localStorage.getItem('timer')) {
-                            // timer.innerText = localStorage.getItem('timer');
-                            console.log(localStorage.getItem('timer'));  
-                        }
-                    }   
-                }
+        window.onpageshow = function (event) {
+        // 새로고침: window.performance.navigation.type == 1
+        // 뒤로가기: window.performance.navigation.type == 2
+            if (event.persisted || (window.performance && (window.performance.navigation.type == 1 || window.onload))) {
+                if (('localStorage' in window) && window['localStorage'] !== null) {
+                    if (localStorage.getItem('timer')) {
+                        // timer.innerText = localStorage.getItem('timer');
+                        console.log(localStorage.getItem('timer'));  
+                    }
+                }   
             }
+        }
         startBtn.addEventListener('click', startButton);
         stopBtn.addEventListener('click', stopButton);
         resetBtn.addEventListener('click', resetButton);

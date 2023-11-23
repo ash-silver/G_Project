@@ -9,11 +9,6 @@
     <link rel="stylesheet" href="../../static/css/reset.css">
     <link rel="stylesheet" href="../../static/css/report_edit.css">
     <title>독후감</title>
-    <!-- <script>
-        $(function(){
-            $("#header").load("header.html");
-        })
-    </script> -->
 </head>
 <body>
     <div class="header">
@@ -25,45 +20,34 @@
         </ul>
  </div>
  
-<!--    <form class="report_edit" th:action="|/book/reading/${findById[]}" th:method="put">-->
     <form class="report_edit" th:action="|/book/update/${id}|" th:method="POST">
         <input type="hidden" name="_method" value="PUT"/>
-<!--    <form class="report_edit" th:action="/book/reading/${id}}" th:method="put">-->
             <legend>기록하고 기억하는 <br> 독서 기록장</legend>
 
             <div class="title">
                 <label for="title">제목</label>
-                <!-- <span th:text="${title}"></span> -->
                 <input type="text" name="readingTitle" placeholder="제목" th:value="${title}">
             </div>
             <div class="author">
                 <label for="author">작가</label>
-<!--                <span th:text="${author}"></span>-->
                 <input type="text" name="readingAuthor" placeholder="작가" th:value="${author}">
             </div>
             <div class="publisher">
                 <label for="publisher">출판사</label>
-                <!-- <span th:text="${publisher}"></span> -->
                 <input type="text" name="readingPublisher" placeholder="출판사" th:value="${publisher}">
             </div>
             <div class="reading_day">
                 <label for="reading_day">독서 기간</label>
-                <!-- <span th:text="${start}"></span> -->
                 <input type="text" name="readingStart" placeholder="시작날짜" th:value="${start}">  ~
-                <!-- <span th:text="${end}"></span> -->
                 <input type="text" name="readingEnd" placeholder="끝난날짜" th:value="${end}">
             </div>
             <div class="content">
                 <label for="content">내용</label>
-                <!-- <span th:text="${content}"></span> -->
                 <textarea name="readingContent" th:text="${content}" cols="61" rows="20"></textarea>
             </div>
-<!--        <script>-->
-<!--            alert(${content});-->
-<!--        </script>-->
+
             <div class="impressive">
                 <label for="content">인상깊은 구절</label>
-                <!-- <span th:text="${impressive}"></span> -->
                 <input name="readingImpressive" placeholder="인상깊은 구절" th:value="${impressive}" cols="50" rows="20">
             </div>
             <p class="edit_button">

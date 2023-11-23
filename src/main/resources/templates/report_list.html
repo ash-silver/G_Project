@@ -8,11 +8,7 @@
     <link rel="stylesheet" href="../static/css/report_list.css">
     <link rel="stylesheet" href="../static/css/reset.css">
     <title>report_list</title>
-    <!-- <script>
-        $(function(){
-            $("#header").load("header.html");
-        })
-    </script> -->
+
 </head>
 <body>
 <div class="header">
@@ -30,6 +26,7 @@
         <p>오늘은 무슨 책을 읽으셨나요?</p>
     </div>
     <span class="write"><a href="write">글쓰기</a></span>
+    <!-- <img src="../static/images/write.png" alt="">  -->
 
     <ul class="list">
 
@@ -37,46 +34,11 @@
             <div class="b_wrap">
                <span th:text="${board.readingTitle}" class="b_title">불편한 편의점</span>
                <span th:text="${board.readingRegister}" class="b_date">2023.11.19</span>
-<!--                    <td th:text="${board.readingAuthor}"/>-->
-<!--                    <td th:text="${board.readingContent}"/>-->
-<!--                    <a href="/report_view/"+${board.readingCD}+></a>-->
-                    <!-- <td th:text="${board.readingTitle}"/> -->
-                    <!-- <td th:text="${board.readingImpressive}"/> -->
-                    <!-- <td th:text="${board.readingRegister}"/> -->
+
             </div>
         </a></li>
-        <!--        <li class=""><a href="./report_view.html">-->
-        <!--            <div class="b_wrap">-->
-        <!--                <span class="b_title">불편한 편의점</span>-->
-        <!--                <span class="b_date">2023.11.19</span>-->
-        <!--            </div>-->
-        <!--        </a></li>-->
-        <!--        <li class=""><a href="./report_view.html">-->
-        <!--            <div class="b_wrap">-->
-        <!--                <span class="b_title">불편한 편의점</span>-->
-        <!--                <span class="b_date">2023.11.19</span>-->
-        <!--            </div>-->
-        <!--        </a></li>-->
-        <!--        <li class=""><a href="./report_view.html">-->
-        <!--            <div class="b_wrap">-->
-        <!--                <span class="b_title">불편한 편의점</span>-->
-        <!--                <span class="b_date">2023.11.19</span>-->
-        <!--            </div>-->
-        <!-- </a></li> -->
-
 
     </ul>
-
-    <!-- <tr class="list" th:each="board : ${tbReading}">
-     <td>
-         <span class="aa" th:text="${board.id}">
-             <a th:href="@{'/post/' + ${board.id}">
-                 <span th:text="${board.title}"></span>
-             </a>
-         </span>
-     </td>
-    </tr> -->
-
 </main>
 
 </body>

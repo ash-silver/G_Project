@@ -118,7 +118,7 @@ fieldset{
     text-align: center;
 }
 .start h1{
-    padding-top: 20px;
+    padding: 30px;
     font-size: 42px;
 }
 .start img{
@@ -126,22 +126,25 @@ fieldset{
 }
 .txt_1{
     font-size: 26px;
-    padding-bottom: 50px;
+    padding-bottom: 60px;
+}
+.txt_wrap{
+
 }
 .txt_2{
     font-size: 22px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 .txt_3{
     font-size: 22px;
 }
 .go_rec{
     width: 250px;
-    height: 100px;
+    height: 80px;
     font-size: 24px;
     cursor: pointer;
     box-sizing: border-box;
-    margin-top: 100px;
+    margin-top: 80px;
     border: none;
     border-radius: 50px;
     background-color: rgb(251, 234, 241);
@@ -151,32 +154,27 @@ fieldset{
     font-size: 26px;
     padding-top: 150px;
 }
+h1{
+  font-weight: bold;
+}
 h2{
     position: relative;
     font-size: 30px;
     top: 100px;
 }
-/* .btn_wrap{
-    text-align: center;
-    margin: auto;
-    padding-top:200px ;
-    font-size: 30px;
-} */
-/* .ans1{
-    width: 250px;
-    height: 140px;
-    font-size: 20px;
-    border: 3px solid red;
-    background-color: white;
-    cursor: pointer;
-    box-sizing: border-box;
+.rec_img{
+  width: auto;
+  height: 250px;
+
 }
-.ans2{
-    width: 250px;
-    height: 140px;
-    font-size: 20px;
-    border: 3px solid red;
-    background-color: white;
-    cursor: pointer;
-    box-sizing: border-box;
-} */
+.rec_img img{
+  position: relative;
+  animation: motion 0.6s /* 속도 */
+  linear 0s   /* 처음부터 끝까지 일정 속도로 진행 */
+  infinite alternate; /* 무한 반복 */
+
+}
+@keyframes motion {
+	0% {margin-top: 0px;} /* 처음 위치 */
+	100% {margin-top: 12px;} /* 마지막 위치 */
+  }

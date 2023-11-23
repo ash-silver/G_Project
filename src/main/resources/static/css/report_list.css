@@ -28,9 +28,13 @@ header{
 .write a{
     display: block;
     position: relative;
-    top: -120px;   
-    left: 500px; 
+    top: -126px;   
+    left: 520px; 
     font-size: 20px;
+    width: 60px;
+    height: 60px;
+    text-indent: -9999px;
+    background: url(../images/write2.png) no-repeat;
 }
 .list{
     width: 640px;
