@@ -25,12 +25,12 @@
       <img class="mem_img " src="../static/images/mmmm.png" alt="">
       <label  >닉네임 : </label>
       <span class="pos" th:text="${session.member_nickname}">홍길동</span>
-      <button onclick="location.href='/logout'">로그아웃</button>
+      <button class="logout" onclick="location.href='/logout'">로그아웃</button>
     </div>
 
     <div class="mem_bottom">
       <strong>회원정보</strong>
-      <button onclick="location.href='/'">회원정보 수정</button>
+      <button class="edit_button" onclick="location.href='/'">회원정보 수정</button>
       <div class="member_nickname">
         <label class="t_label" >닉넴</label>
         <span th:text="${session.member_nickname}">홍길동</span>
