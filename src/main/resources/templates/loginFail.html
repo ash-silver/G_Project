@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <link rel="stylesheet" href="../static/css/reset.css">
+  <link rel="stylesheet" href="../static/css/index.css">
+  <title>접속 첫 페이지</title>
+</head>
+<body>
+<form name="login_form" th:action="@{/members/login}" th:method="post" >
+  <fieldset>
+
+    <legend class="top">독서 매니저에 오신걸 환영합니다</legend>
+    <legend>로그인 정보가 틀렸습니다.</legend>
+
+    <div class="member_email line">
+      <label for="member_email">이메일</label>
+      <input type="text" name="member_email" id="member_email" placeholder="이메일">
+    </div>
+
+    <div class="member_password line">
+      <label for="member_password">비밀번호</label>
+      <input type="password" name="member_password" id="member_password" placeholder="비밀번호">
+    </div>
+    <div class="search line">
+      <a href="/findId">이메일 찾기</a> |
+      <a href="/findPw">비밀번호 찾기</a>
+
+    </div>
+    <div class="login_bt">
+      <button type="submit">로그인</button>
+    </div>
+    <div class="join">
+      <a href="members/join">회원가입 하기</a>
+    </div>
+
+
+  </fieldset>
+
+</form>
+
+</body>
+</html>

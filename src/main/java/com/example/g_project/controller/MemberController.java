@@ -6,6 +6,7 @@ import com.example.g_project.service.MemberService;
 import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,12 +34,20 @@ public class MemberController {
             session.setAttribute("member_CD", findMember.getMember_CD());
             session.setAttribute("member_nickname", findMember.getMember_nickname());
             session.setAttribute("member_password", findMember.getMember_password());
+            session.setAttribute("member_phone", findMember.getMemeber_phone());
             member_CD=findMember.getMember_CD();
             return "redirect:/home";
         }
         else{
-            return "redirect:/login";
+            return "loginFail";
         }
+    }
+    @PostMapping("/findId")
+    public String findId(MemberRequest request, Model model){
+
+        MemberResponse findMember = memberService.findId(request);
+        model.addAttribute("email", findMember.getMember_email());
+        return "resultId";
     }
 //    @GetMapping("")
 

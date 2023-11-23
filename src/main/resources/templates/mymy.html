@@ -23,9 +23,9 @@
     <legend>내 정보 관리</legend>
     <div class="mem_top">
       <img class="mem_img " src="../static/images/mmmm.png" alt="">
-      <label  >닉넴 : </label>
+      <label  >닉네임 : </label>
       <span class="pos" th:text="${session.member_nickname}">홍길동</span>
-      <button onclick="location.href='/home'">로그아웃</button>
+      <button onclick="location.href='/logout'">로그아웃</button>
     </div>
 
     <div class="mem_bottom">
@@ -39,6 +39,10 @@
       <div class="member_email">
        <label class="t_label u_title" for="member_email">이메일/아이디</label>
         <span th:text="${session.member_email}">hong@gmail.com</span>
+      </div>
+      <div class="member_phone">
+       <label class="t_label u_title" for="member_email">핸드폰 번호</label>
+        <span th:text="${session.member_phone}">31651651</span>
       </div>
 
       <div class="member_password">

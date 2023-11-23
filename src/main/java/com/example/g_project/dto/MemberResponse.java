@@ -12,6 +12,7 @@ public class MemberResponse {
     private String member_nickname;
     private String member_gender;
     private Long member_CD;
+    private String memeber_phone;
 
     public MemberResponse(Member entity){
         this.member_CD= entity.getMemberCD();
@@ -19,6 +20,7 @@ public class MemberResponse {
         this.member_password=entity.getMemberPassword();
         this.member_nickname=entity.getMemberNickname();
         this.member_gender=entity.getMemberGender();
+        this.memeber_phone=entity.getMemberPhone();
     }
 
 }

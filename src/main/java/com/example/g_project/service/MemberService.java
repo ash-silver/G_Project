@@ -23,4 +23,10 @@ public class MemberService {
                 .map(member -> new MemberResponse(member)).orElse(null);
     }
 
+    public MemberResponse findId(MemberRequest request){
+        return memberRepository.findByMemberPhone(request.getMember_phone())
+                .filter(member -> member.getMemberNickname().equals(request.getMember_nickname()))
+                .map(member -> new MemberResponse(member)).orElse(null);
+    }
+
 }

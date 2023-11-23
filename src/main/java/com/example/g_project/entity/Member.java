@@ -24,6 +24,8 @@ public class Member {
     private String memberEmail;
     @Column(name="member_password", nullable = false)
     private String memberPassword;
+    @Column(name="member_phone", nullable = false)
+    private String memberPhone;
     @Column(name="member_nickname", nullable = false)
     private String memberNickname;
     @Column(name="member_gender", nullable = false)

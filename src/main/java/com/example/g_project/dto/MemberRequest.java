@@ -11,11 +11,13 @@ public class MemberRequest {
     private String member_password;
     private String member_nickname;
     private String member_gender;
+    private String member_phone;
 
     public Member memberEntity(){
         return Member.builder()
                 .member_email(member_email)
                 .member_password(member_password)
+                .member_password(member_phone)
                 .member_nickname(member_nickname)
                 .member_gender(member_gender)
                 .build();
