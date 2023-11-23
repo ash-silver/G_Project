@@ -7,18 +7,20 @@ fieldset{
 legend{
     font-size: 40px;
     font-weight: bold;
+    padding: 20px;
 }
 label{
     width: 100px;
     margin: auto;
     text-align: center;
     display: inline-block;
+    font-size: 20px;
 }
 input{
     width: 160px;
     height: 40px;
     border: none;
-    font-size: 18px;
+    font-size: 20px;
     margin: 18px 0;
     border: 1px solid #c5c5c5;
     border-radius: 5px;
@@ -35,8 +37,14 @@ input{
 .reading_day input{
     width: 200px;
 }
+
+.impressive label{
+    width: 100px;
+    height: 86px;
+}
 .impressive input{
     width: 440px;
+    
 }
 .content label{
     position: relative;
@@ -44,6 +52,14 @@ input{
 }
 .edit_button{
     text-align: center;
+}
+.content textarea{
+    font-size: 18px;
+}
+.count{
+    position: relative;
+    left: 500px;
+    top: -40px;
 }
 button{
     width: 120px;

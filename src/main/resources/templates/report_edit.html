@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../../static/css/reset.css">
     <link rel="stylesheet" href="../../static/css/report_edit.css">
     <title>독후감</title>
+
 </head>
 <body>
     <div class="header">
@@ -21,7 +22,8 @@
  </div>
  
     <form class="report_edit" th:action="|/book/update/${id}|" th:method="POST">
-        <input type="hidden" name="_method" value="PUT"/>
+        <fieldset>
+            <input type="hidden" name="_method" value="PUT"/>
             <legend>기록하고 기억하는 <br> 독서 기록장</legend>
 
             <div class="title">
@@ -43,7 +45,8 @@
             </div>
             <div class="content">
                 <label for="content">내용</label>
-                <textarea name="readingContent" th:text="${content}" cols="61" rows="20"></textarea>
+                <textarea name="readingContent" th:text="${content}" cols="47" rows="20" wrap="on"></textarea>
+                <div class="count"><span>0</span>/200</div>
             </div>
 
             <div class="impressive">
@@ -56,6 +59,17 @@
 
         </fieldset>
     </form>
+    <script>
+        $('.content textarea').keyup(function(){
+        var content = $(this).val();
+        $('.content .count span').html(content.length);
+        if (content.length > 200){
+            alert("최대 200자까지 입력 가능합니다.");
+            $(this).val(content.substring(0, 200));
+            $('.content .count span').html(200);
+        }
+        });
+    </script>
     
 </body>
 </html>

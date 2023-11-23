@@ -7,10 +7,11 @@ fieldset{
 legend{
     font-size: 40px;
     font-weight: bold;
+    padding: 20px;
 }
 label{
     width: 100px;
-    height: 100px;
+    padding: 46px 0 46px;
     margin: auto;
     text-align: center;
     display: inline-block;
@@ -38,6 +39,8 @@ span{
     width: 200px;
 }
 .content span{
+    width: 440px;
+    height: 100%;
     position: relative;
     top:10px
 }

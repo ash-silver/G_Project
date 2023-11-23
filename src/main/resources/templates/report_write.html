@@ -28,35 +28,46 @@
 
             <div class="title">
                 <label for="title">제목</label>
-                <input type="text" name="readingTitle" id="title">
+                <input type="text" name="readingTitle" placeholder="제목" id="title">
             </div>
             <div class="author">
                 <label for="author">작가</label>
-                <input type="text" name="readingAuthor" id="author">
+                <input type="text" name="readingAuthor" placeholder="작가" id="author">
             </div>
             <div class="publisher">
                 <label for="publisher">출판사</label>
-                <input type="text" name="readingPublisher" id="publisher">
+                <input type="text" name="readingPublisher" placeholder="출판사" id="publisher">
             </div>
             <div class="reading_day">
                <label for="reading_day">독서 기간</label>
-                <input type="text" name="readingStart" id="start">  ~
-                <input type="text" name="readingEnd" id="end">
+                <input type="text" name="readingStart" placeholder="시작날짜" id="start">  ~
+                <input type="text" name="readingEnd" placeholder="끝난날짜" id="end">
             </div>
             <div class="content">
                <label for="content">내용</label>
-                <textarea name="readingContent" id="reading_content" cols="61" rows="20"></textarea>
+                <textarea name="readingContent" id="reading_content" cols="47" rows="20" wrap="on"></textarea>
+                <div class="count"><span>0</span>/200</div>
             </div>
             <div class="impressive">
                <label for="content">인상깊은 구절</label>
-                <input name="readingImpressive" id="reading_impressive" cols="50" rows="20">
+                <input name="readingImpressive" placeholder="인상깊은 구절" id="reading_impressive" cols="50" rows="20">
             </div>
             <div class="button">
                 <button type="submit">등록하기</button>
             </div>
-
         </fieldset>
     </form>
+    <script>
+        $('.content textarea').keyup(function(){
+        var content = $(this).val();
+        $('.content .count span').html(content.length);
+        if (content.length > 200){
+            alert("최대 200자까지 입력 가능합니다.");
+            $(this).val(content.substring(0, 200));
+            $('.content .count span').html(200);
+        }
+        });
+    </script>
     
 </body>
 </html>
