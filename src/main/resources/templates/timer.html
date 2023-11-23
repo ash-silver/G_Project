@@ -91,18 +91,7 @@
                     }
                 }
         });
-        window.onpageshow = function (event) {
-        // 새로고침: window.performance.navigation.type == 1
-        // 뒤로가기: window.performance.navigation.type == 2
-            if (event.persisted || (window.performance && (window.performance.navigation.type == 1 || window.onload))) {
-                if (('localStorage' in window) && window['localStorage'] !== null) {
-                    if (localStorage.getItem('timer')) {
-                        // timer.innerText = localStorage.getItem('timer');
-                        console.log(localStorage.getItem('timer'));  
-                    }
-                }   
-            }
-        }
+
         startBtn.addEventListener('click', startButton);
         stopBtn.addEventListener('click', stopButton);
         resetBtn.addEventListener('click', resetButton);
