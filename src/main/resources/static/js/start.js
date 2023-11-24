@@ -2,7 +2,7 @@ const main = document.querySelector("#main");
 const qna = document.querySelector("#question");
 const result = document.querySelector("#result");
 const end = 10; 
-const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+const select = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 function start(){  //시작하면 질문 등장
   $("#main").fadeOut("slow");
@@ -79,7 +79,7 @@ function setResult(){
   resultDesc.innerHTML = infoList[point].desc;
 }
 function cal(){
-  // console.log(select); //리스트 확인용
+  console.log(select); //리스트 확인용
   var result = select.indexOf(Math.max(...select));
   return result;
 }
