@@ -12,7 +12,6 @@
   <fieldset>
 
     <legend class="top">독서 매니저에 오신걸 환영합니다</legend>
-    <legend>로그인 정보가 틀렸습니다.</legend>
 
     <div class="member_email line">
       <label for="member_email">이메일</label>
@@ -23,11 +22,16 @@
       <label for="member_password">비밀번호</label>
       <input type="password" name="member_password" id="member_password" placeholder="비밀번호">
     </div>
+        </div>
+    <div class="fail">
+      <span>로그인 정보가 틀렸습니다.</span>
+    </div>
     <div class="search line">
       <a href="/findId">이메일 찾기</a> |
       <a href="/findPw">비밀번호 찾기</a>
 
-    </div>
+
+
     <div class="login_bt">
       <button type="submit">로그인</button>
     </div>

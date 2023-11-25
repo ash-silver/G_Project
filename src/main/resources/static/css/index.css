@@ -51,6 +51,7 @@ input{
     font-size: 26px;
     font-weight: bold;
     cursor: pointer;
+    border-radius: 10px;
 }
 .join{
     margin: auto;
@@ -67,5 +68,24 @@ input{
     font-weight: bold;
     cursor: pointer;
     padding-top: 10px;
+    border-radius: 10px;
+}
+.fail{
+    margin: auto;
+    text-align: center;
+}
+.fail span{
+    margin: auto;
+    margin-top: 30px;
+    display: block;
+    width: 500px;
+    height: 50px;
+    padding-top: 5px;
+    border: 0.5px solid rgb(163, 9, 66);
+    background-color: #fff9f9;
+    color: #a71212;
+    font-size: 26px;
+    border-radius: 10px;
+    margin-bottom: 20px;
 
 }
