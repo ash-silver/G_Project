@@ -47,7 +47,8 @@ public class ReadingService {
 
     @Transactional
     public List<Reading> readingList(){
-//        List<ReadingResponse> readingList = readingRepository.findAll();
-        return readingRepository.findAll();
+        List<Reading> readingList = readingRepository.findAll();
+
+        return readingList;
     }
 }

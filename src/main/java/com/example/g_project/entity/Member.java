@@ -22,9 +22,9 @@ public class Member {
 
     @Column(name="member_email", nullable = false)
     private String memberEmail;
-    @Column(name="member_password", nullable = false)
+    @Column(name="member_password")
     private String memberPassword;
-    @Column(name="member_phone", nullable = false)
+    @Column(name="member_phone")
     private String memberPhone;
     @Column(name="member_nickname", nullable = false)
     private String memberNickname;
@@ -39,12 +39,14 @@ public class Member {
             , String member_email
             , String member_password
             , String member_nickname
+            , String member_phone
             , String member_gender
             , LocalDateTime member_register){
         this.memberCD=member_CD;
         this.memberEmail=member_email;
         this.memberPassword=member_password;
         this.memberNickname=member_nickname;
+        this.memberPhone=member_phone;
         this.memberGender=member_gender;
         this.memberRegister=member_register;
     }

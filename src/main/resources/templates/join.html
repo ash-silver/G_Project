@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="../static/css/join.css">
     <title>Document</title>
 </head>
+<script type="text/javascript">
+    function passwordDuplicate(){
+        var p1 = document.getElementById('member_password').value;
+        var p2 = document.getElementById('re_password').value;
+        if(p1 != p2){
+            alert("비밀번호가 일치하지 않습니다.")
+            return false;
+        }
+        else{
+            alert("비밀번호가 일치합니다.");
+            return true;
+        }
+    }
+</script>
 <body>
     <form class="join_form" th:action="@{/members/join}" th:method="post">
         <fieldset>
@@ -27,6 +41,11 @@
             <div class="re_password line">
                 <label for="re_password" class="n_label">비밀번호 확인</label>
                 <input class="s_input" type="password" name="re_password" id="re_password" placeholder="비밀번호 확인">
+            </div>
+            <input type="button" onclick="passwordDuplicate()" value="비밀번호 중복 확인">
+            <div class="member_phone line">
+                <label for="member_phone">핸드폰</label>
+                <input type="password" name="member_phone" id="member_phone" placeholder="핸드폰 번호">
             </div>
 
             <div class="member_gender line">

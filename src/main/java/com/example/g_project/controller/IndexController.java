@@ -27,6 +27,10 @@ public class IndexController {
         return "mymy";
     }
 
+    @GetMapping("/myEdit")
+    public String myEdit(){
+        return "my_edit";
+    }
     @GetMapping("/findId")
     public String findId(){
 

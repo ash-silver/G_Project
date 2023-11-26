@@ -17,7 +17,7 @@ public class MemberRequest {
         return Member.builder()
                 .member_email(member_email)
                 .member_password(member_password)
-                .member_password(member_phone)
+                .member_phone(member_phone)
                 .member_nickname(member_nickname)
                 .member_gender(member_gender)
                 .build();
