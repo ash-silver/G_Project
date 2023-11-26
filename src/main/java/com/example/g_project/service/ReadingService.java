@@ -4,6 +4,7 @@ import com.example.g_project.dto.ReadingRequest;
 import com.example.g_project.dto.ReadingResponse;
 import com.example.g_project.entity.Reading;
 import com.example.g_project.entity.ReadingRepository;
+import jakarta.servlet.http.HttpSession;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
