@@ -48,8 +48,11 @@
         let cron;
         function resetButton(){
             timer.innerHTML="00:00:00"
-            localStorage.getItem('timer')==0;
-            return (TIME=0);
+            TIME=0;
+            // localStorage.setItem('timer')==0;
+            localStorage.setItem('timer', JSON.stringify(timer.innerText));
+            localStorage.setItem('TIME', TIME);
+            // return (TIME=0);
         }
         function startButton(){
             var imgAni = document.querySelector('img');
