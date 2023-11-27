@@ -3,8 +3,6 @@ fieldset{
     padding: 20px;
     font-size: 20px;
 }
-
-
 legend{
     font-size: 40px;
     font-weight: bold;
@@ -12,7 +10,7 @@ legend{
 }
 label{
     width: 100px;
-    padding: 46px 0 46px;
+    padding: 26px 0 26px;
     margin: auto;
     text-align: center;
     display: inline-block;

@@ -49,7 +49,7 @@
             <div class="content">
                <label for="content">내용</label>
                 <textarea name="readingContent" id="reading_content" cols="47" rows="18" wrap="on"></textarea>
-                <div class="count"><span>0</span>/160</div>
+                <div class="count"><span>0</span>/500</div>
             </div>
             <div class="impressive">
                <label for="content">인상깊은<br>구절</label>
@@ -64,10 +64,10 @@
         $('.content textarea').keyup(function(){
         var content = $(this).val();
         $('.content .count span').html(content.length);
-        if (content.length > 160){
-            alert("최대 160자까지 입력 가능합니다.");
-            $(this).val(content.substring(0, 160));
-            $('.content .count span').html(160);
+        if (content.length > 500){
+            alert("최대 500자까지 입력 가능합니다.");
+            $(this).val(content.substring(0, 500));
+            $('.content .count span').html(500);
         }
         });
     </script>
