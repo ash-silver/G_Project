@@ -2,8 +2,9 @@ fieldset{
     border: none;
     padding: 20px;
     font-size: 20px;
-
 }
+
+
 legend{
     font-size: 40px;
     font-weight: bold;
@@ -19,7 +20,7 @@ label{
 }
 span{
     display: inline-block;
-    width: 160px;
+    width: 180px;
     height: 40px;
     border: none;
     font-size: 20px;
@@ -28,6 +29,9 @@ span{
     vertical-align: middle;
     padding-left: 10px;
     /* border: 0.5px solid red; */
+}
+.title span{
+    width: 430px;
 }
 .title input{
     width: 440px;
@@ -45,6 +49,7 @@ span{
     top:10px
 }
 .impressive span{
+    width: 430px;
     position: relative;
     top: -10px;
 }

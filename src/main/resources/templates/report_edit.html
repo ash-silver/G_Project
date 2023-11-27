@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="../../static/css/home.css">
     <link rel="stylesheet" href="../../static/css/reset.css">
     <link rel="stylesheet" href="../../static/css/report_edit.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
     <title>독후감</title>
 
 </head>
@@ -45,8 +48,8 @@
             </div>
             <div class="content">
                 <label for="content">내용</label>
-                <textarea name="readingContent" th:text="${content}" cols="47" rows="20" wrap="on"></textarea>
-                <div class="count"><span>0</span>/200</div>
+                <textarea name="readingContent" th:text="${content}" cols="47" rows="18" wrap="on"></textarea>
+                <div class="count"><span>0</span>/160</div>
             </div>
 
             <div class="impressive">
@@ -63,10 +66,10 @@
         $('.content textarea').keyup(function(){
         var content = $(this).val();
         $('.content .count span').html(content.length);
-        if (content.length > 200){
-            alert("최대 200자까지 입력 가능합니다.");
-            $(this).val(content.substring(0, 200));
-            $('.content .count span').html(200);
+        if (content.length > 160){
+            alert("최대 160자까지 입력 가능합니다.");
+            $(this).val(content.substring(0, 160));
+            $('.content .count span').html(160);
         }
         });
     </script>

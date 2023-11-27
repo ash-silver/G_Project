@@ -5,34 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/reset.css">
     <link rel="stylesheet" href="../static/css/join.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <script type="text/javascript">
     function passwordDuplicate(){
-        var p1 = document.getElementById('member_password').value;
-        var p2 = document.getElementById('re_password').value;
-        if(p1 != p2){
-            alert("비밀번호가 일치하지 않습니다.")
+        var email = document.getElementById('member_email');
+        var nickname = document.getElementById('member_nickname');
+        var p1 = document.getElementById('member_password');
+        var p2 = document.getElementById('re_password');
+        var phone = document.getElementById('member_phone');
+        var gender = document.getElementById('member_gender');
+
+        if(email.value == ""){
+            var txt=document.getElementById('err_em');
+            txt.style.display = 'block';
+            txt.innerText="이메일을 입력하세요."; 
+            email.focus();
+            return false;
+            // txt.style.display = 'none';
+        }
+
+        if(nickname.value == ""){
+            var txt=document.getElementById('err_nic');
+            txt.style.display = 'block';
+            txt.innerText="닉네임을 입력하세요."; 
+            nickname.focus();
             return false;
         }
-        else{
-            alert("비밀번호가 일치합니다.");
-            return true;
+        if(p1.value != p2.value){
+            // alert("비밀번호가 일치하지 않습니다.")
+            var txt=document.getElementById('err_pwd');
+            txt.style.display = 'block';
+            txt.innerText="비밀번호가 일치하지 않습니다."; 
+            p2.focus();
+            return false;
         }
+        if(phone.value == ""){
+            var txt=document.getElementById('err_ph');
+            txt.style.display = 'block';
+            txt.innerText="핸드폰 번호를 입력하세요."; 
+            phone.focus();
+            return false;
+        }
+
+
     }
 </script>
 <body>
-    <form class="join_form" th:action="@{/members/join}" th:method="post">
+    <form class="join_form" th:action="@{/members/join}" th:method="post" onsubmit="return passwordDuplicate()">
         <fieldset>
             <legend>독서 매니저에 회원가입하기</legend>
 
             <div class="member_email line">
                 <label for="member_email"class="n_label">이메일</label>
                 <input class="s_input" type="text" name="member_email" id="member_email" placeholder="아이디/이메일">
+                <p class="err" id="err_em"></p>
             </div>
             <div class="member_nickname line">
                 <label for="member_nickname" class="n_label">닉네임</label>
                 <input class="s_input" type="text" name="member_nickname" id="member_nickname" placeholder="닉네임">
+                <p class="err" id="err_nic"></p>
             </div>
             <div class="member_password line">
                 <label for="member_password" class="n_label">비밀번호</label>
@@ -41,11 +76,13 @@
             <div class="re_password line">
                 <label for="re_password" class="n_label">비밀번호 확인</label>
                 <input class="s_input" type="password" name="re_password" id="re_password" placeholder="비밀번호 확인">
+                <p class="err" id="err_pwd"></p>
+
             </div>
-            <input type="button" onclick="passwordDuplicate()" value="비밀번호 중복 확인">
             <div class="member_phone line">
-                <label for="member_phone">핸드폰</label>
-                <input type="password" name="member_phone" id="member_phone" placeholder="핸드폰 번호">
+                <label for="member_phone" class="n_label">핸드폰</label>
+                <input class="s_input" type="text" name="member_phone" id="member_phone" placeholder="핸드폰 번호">
+                <p class="err" id="err_ph"></p>
             </div>
 
             <div class="member_gender line">
@@ -57,10 +94,9 @@
             </div>
 
             <p class="fin_bt">
-                <button class="join_btn" type="submit">회원가입</button>
+                <button class="join_btn"  type="submit">회원가입</button>
                 <button class="back_btn" type="button" onclick="history.back()">돌아가기</button>
             </p>
-
 
         </fieldset>
     </form>

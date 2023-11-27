@@ -49,7 +49,7 @@ input{
 }
 .count{
     position: relative;
-    left: 500px;
+    left: 480px;
     top: -40px;
 }
 .button{
@@ -64,4 +64,5 @@ button{
     background-color: rgb(255, 246, 234);
     border:  none;
     border-radius: 10px;
+    cursor: pointer;
 }
