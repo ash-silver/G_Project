@@ -32,7 +32,7 @@
     margin: auto;
     margin-top: 200px;
     color: white;
-    padding-top: 10px;
+    padding-top: 5px;
   }
   /* 답변 */
   .answer_box{
@@ -70,7 +70,7 @@
     text-align: center;
     border-radius: 20px;
     width: 90%;
-    height: 900px;
+    height: 830px;
     margin: auto;
 
   }
