@@ -33,7 +33,6 @@ public class IndexController {
     }
     @GetMapping("/findId")
     public String findId(){
-
         return "find_id";
     }
     @GetMapping("/findPw")
