@@ -23,7 +23,7 @@
 
 <main>
   <fieldset>
-    <legend>내 정보 관리</legend>
+    <legend>내 정보</legend>
     <div class="mem_top">
       <img class="mem_img " src="../static/images/mmmm.png" alt="">
       <label  >닉네임 : </label>
@@ -33,7 +33,7 @@
 
     <div class="mem_bottom">
       <strong>회원정보</strong>
-      <button class="edit_button" onclick="location.href='/myEdit'">회원정보 수정</button>
+<!--      <button class="edit_button" onclick="location.href='/myEdit'">회원정보 수정</button>-->
       <div class="member_nickname">
         <label class="t_label" >닉네임</label>
         <span th:text="${session.member_nickname}">홍길동</span>
