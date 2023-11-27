@@ -47,9 +47,11 @@ public class ReadingService {
     }
 
     @Transactional
-    public List<Reading> readingList(){
-        List<Reading> readingList = readingRepository.findAll();
+    public List<Reading> readingList(String memberNickname){
+        List<Reading> readingList = readingRepository.findByMemberNickname(memberNickname);
 
         return readingList;
     }
+
+
 }

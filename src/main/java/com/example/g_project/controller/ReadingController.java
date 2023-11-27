@@ -75,8 +75,8 @@ public class ReadingController {
     }
 
     @GetMapping("/list")
-    public String list(Model model){
-        model.addAttribute("readingList", readingService.readingList());
+    public String list(Model model, HttpSession httpSession){
+        model.addAttribute("readingList", readingService.readingList(httpSession.getAttribute("member_nickname").toString()));
         return "report_list";
     }
 
