@@ -59,8 +59,9 @@ header{
 }
 .list li a{
     width: 164px;
-    height: 220px;
+    height: 170px;
     display: block;
+    padding-top: 50px;
     
 }
 .b_wrap{
@@ -70,7 +71,7 @@ header{
     text-align: center;
 }
 .b_title{
-    margin-top: 60px;
+    /* margin-top: 60px; */
     display: block;
     background-color: rgb(251, 249, 243);
     padding: 10px;
